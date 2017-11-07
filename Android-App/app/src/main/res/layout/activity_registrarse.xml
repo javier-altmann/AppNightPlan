@@ -14,8 +14,36 @@
         android:layout_height="160dp"
         android:layout_gravity="center"
         android:src="@drawable/logofondotransparente"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:hint="Usuario"
+        android:textColorHint="#FFFFFF"
+        android:textAlignment="center"
+        android:backgroundTint="#FFFFFFFF"
+        android:textSize="20dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/montserratregular"
+        />
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:hint="Contraseña"
+        android:textColorHint="#FFFFFF"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:backgroundTint="#FFFFFFFF"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/montserratregular"
+        />
+
+
+
     <EditText
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -26,6 +54,8 @@
         android:textAlignment="center"
         android:textSize="20dp"
         android:backgroundTint="#FFFFFFFF"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/montserratregular"
 
         />
 
@@ -39,8 +69,10 @@
         android:textAlignment="center"
         android:textSize="20dp"
         android:backgroundTint="#FFFFFFFF"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/montserratregular"
         />
+
 
     <EditText
         android:layout_width="300dp"
@@ -51,34 +83,10 @@
         android:textAlignment="center"
         android:textSize="20dp"
         android:backgroundTint="#FFFFFFFF"
-        android:layout_marginTop="15dp"
-        />
-    <EditText
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:hint="Usuario"
-        android:textColorHint="#FFFFFF"
-        android:textAlignment="center"
-        android:backgroundTint="#FFFFFFFF"
-        android:textSize="20dp"
-
-        android:layout_marginTop="15dp"
-        />
-    <EditText
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:hint="Contraseña"
-        android:textColorHint="#FFFFFF"
-        android:textAlignment="center"
-        android:textSize="20dp"
-        android:backgroundTint="#FFFFFFFF"
-
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/montserratregular"
         />
     <Button
-
         android:layout_width="250dp"
         android:layout_marginLeft="75dp"
         android:layout_height="40dp"
@@ -86,33 +94,35 @@
         android:background="@drawable/boton_redondo"
         android:textColor="#FFFF"
         android:textSize="20dp"
-        android:layout_marginTop="15dp"
-
+        android:layout_marginTop="25dp"
 
         />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_marginTop="25dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="35dp"
         android:background="#FFFFFF">
 
 
         <ImageView
             android:layout_width="50dp"
-            android:layout_height="25dp"
+            android:layout_height="35dp"
             android:src="@drawable/btnfb"
             android:layout_marginLeft="20dp"/>
-        <TextView
 
+        <TextView
         android:layout_width="wrap_content"
-        android:layout_height="25dp"
+        android:layout_height="30dp"
         android:background="#FFFF"
         android:text="Registrate con Facebook"
         android:textSize="20dp"
         android:textAlignment="center"
         android:textColor="#151431"
-            android:layout_marginLeft="50dp"
+        android:layout_marginLeft="50dp"
+        android:fontFamily="@font/montserratregular"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
 
         />
     </LinearLayout>
