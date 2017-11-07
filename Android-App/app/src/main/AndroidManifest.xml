@@ -12,7 +12,8 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+
+            android:theme="@style/NoToolbarTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,17 +21,21 @@
             </intent-filter>
         </activity>
 
-
-        // Agrego Login Activity y le pongo como estilo que no tenga Toolbar
-        <activity android:name=".RegistrarseActivity"
-            android:theme="@style/NoToolbarTheme">
-        </activity>
+        <!--android:theme="@style/AppTheme.NoActionBar"> -->
 
         <activity android:name=".LoginActivity"
             android:theme="@style/NoToolbarTheme">
         </activity>
 
         <activity android:name=".GrupoActivity"
+            android:theme="@style/NoToolbarTheme">
+        </activity>
+
+        <activity android:name=".InicioActivity"
+            android:theme="@style/NoToolbarTheme">
+        </activity>
+
+        <activity android:name=".RegistrarseActivity"
             android:theme="@style/AppTheme">
         </activity>
 
