@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/pizza_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#151431">
+
+
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="160dp"
+        android:layout_gravity="center"
+        android:src="@drawable/logofondotransparente"
+        android:layout_marginTop="20dp"
+        />
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:textColor="#FFFFFF"
+        android:hint="Nombre"
+        android:textColorHint="#FFFFFF"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:backgroundTint="#FFFFFFFF"
+
+        />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:textColor="#FFFFFF"
+        android:hint="Apellido"
+        android:textColorHint="#FFFFFF"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:backgroundTint="#FFFFFFFF"
+        android:layout_marginTop="15dp"
+        />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:hint="Mail"
+        android:textColorHint="#FFFFFF"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:backgroundTint="#FFFFFFFF"
+        android:layout_marginTop="15dp"
+        />
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:hint="Usuario"
+        android:textColorHint="#FFFFFF"
+        android:textAlignment="center"
+        android:backgroundTint="#FFFFFFFF"
+        android:textSize="20dp"
+
+        android:layout_marginTop="15dp"
+        />
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:hint="Contraseña"
+        android:textColorHint="#FFFFFF"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:backgroundTint="#FFFFFFFF"
+
+        android:layout_marginTop="15dp"
+        />
+    <Button
+
+        android:layout_width="250dp"
+        android:layout_marginLeft="75dp"
+        android:layout_height="40dp"
+        android:text="Registrarse"
+        android:background="@drawable/boton_redondo"
+        android:textColor="#FFFF"
+        android:textSize="20dp"
+        android:layout_marginTop="15dp"
+
+
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="25dp"
+        android:background="#FFFFFF">
+
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            android:src="@drawable/btnfb"
+            android:layout_marginLeft="20dp"/>
+        <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:background="#FFFF"
+        android:text="Registrate con Facebook"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:textColor="#151431"
+            android:layout_marginLeft="50dp"
+
+        />
+    </LinearLayout>
+</LinearLayout>
+
+
+
+

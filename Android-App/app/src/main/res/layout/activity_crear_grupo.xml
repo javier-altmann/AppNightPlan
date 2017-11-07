@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pizza_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#797A"
+    >
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="480dp"
+        android:layout_gravity="center"
+        android:layout_margin="15dp"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        >
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="35dp"
+            android:textColor="#797A7A"
+            android:hint="Nombre del grupo"
+            android:textColorHint="#797A7A"
+            android:textSize="22dp"
+            android:backgroundTint="#797A7A"
+
+            >
+        </EditText>
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp"
+            android:textColor="#797A7A"
+            android:hint="Participantes"
+            android:textColorHint="#797A7A"
+            android:textSize="22dp"
+            android:backgroundTint="#797A7A"
+
+            >
+        </EditText>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/imagen2"
+            android:layout_marginTop="30dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CARO"
+            android:textSize="18dp"
+            android:layout_marginLeft="30dp"
+            android:textStyle="bold"
+
+            />
+
+        <Button
+
+            android:layout_width="250dp"
+            android:layout_marginLeft="55dp"
+            android:layout_height="40dp"
+            android:text="Crear grupo"
+            android:background="@drawable/boton_redondo"
+            android:textColor="#FFFF"
+            android:textSize="20dp"
+            android:layout_marginTop="140dp"
+            android:fontFamily="font/montserratregular"
+
+            />
+</LinearLayout>
+</LinearLayout>
