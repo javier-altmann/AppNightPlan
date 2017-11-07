@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".LoginActivity"
             android:label="@string/app_name"
 
             android:theme="@style/NoToolbarTheme">
@@ -23,24 +23,24 @@
 
         <!--android:theme="@style/AppTheme.NoActionBar"> -->
 
-        <activity android:name=".LoginActivity"
-            android:theme="@style/NoToolbarTheme">
-        </activity>
-
-        <activity android:name=".GrupoActivity"
-            android:theme="@style/NoToolbarTheme">
-        </activity>
-
         <activity android:name=".InicioActivity"
             android:theme="@style/NoToolbarTheme">
         </activity>
 
-        <activity android:name=".RegistrarseActivity"
+        <activity android:name=".CrearGrupoActivity"
+            android:theme="@style/NoToolbarTheme">
+        </activity>
+
+        <activity android:name=".MainActivity"
+            android:theme="@style/NoToolbarTheme">
+        </activity>
+
+        <activity android:name=".GrupoActivity"
             android:theme="@style/AppTheme">
         </activity>
 
 
-        <activity android:name=".CrearGrupoActivity"
+        <activity android:name=".RegistrarseActivity"
             android:theme="@style/AppTheme">
         </activity>
 
