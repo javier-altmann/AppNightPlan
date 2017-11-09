@@ -8,6 +8,10 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.widget.ListView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by javier.altmann on 4/11/2017.
@@ -31,6 +35,16 @@ public class GrupoActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
+        List<Grupo> grupoList = new ArrayList<>();
+        grupoList.add(new Grupo(getBaseContext(), 1, "Boca", R.drawable.imagen2, "05-11-2017"));
+        grupoList.add(new Grupo(getBaseContext(), 2, "River", R.drawable.imagen2, "06-11-2017"));
+        grupoList.add(new Grupo(getBaseContext(), 3, "Racing", R.drawable.imagen2, "07-11-2017"));
+        grupoList.add(new Grupo(getBaseContext(), 4, "Independiente", R.drawable.imagen2, "08-11-2017"));
+
+        ListView grupoLv = (ListView) findViewById(R.id.crear_grupo_lv);
+        grupoLv.setAdapter(new GrupoAdapter(getBaseContext(), grupoList));
     }
 
     @Override

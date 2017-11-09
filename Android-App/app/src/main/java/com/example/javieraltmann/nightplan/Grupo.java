@@ -11,14 +11,31 @@ public class Grupo {
     private String name;
     private Usuario participantesDelGrupo;
     private String fechaDeCreacion;
+    private int foto;
     private Context context;
 
-    public Grupo(int idGroup, String name, Usuario participantesDelGrupo, String fechaDeCreacion, Context context) {
+    public Grupo(Context context , int idGroup, String name, Usuario participantesDelGrupo, String fechaDeCreacion) {
         this.idGroup = idGroup;
         this.name = name;
         this.participantesDelGrupo = participantesDelGrupo;
         this.fechaDeCreacion = fechaDeCreacion;
         this.context = context;
+    }
+
+    public Grupo(Context context, int idGroup, String name, int foto, String fechaDeCreacion){
+        this.idGroup = idGroup;
+        this.name = name;
+        this.foto = foto;
+        this.fechaDeCreacion = fechaDeCreacion;
+        this.context = context;
+    }
+
+    public void setFoto(int foto) {
+        this.foto = foto;
+    }
+
+    public int getFoto() {
+        return foto;
     }
 
     public int getIdGroup() {

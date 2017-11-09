@@ -6,35 +6,48 @@
     android:background="#dddddd"
     >
 
-
-
-
     <LinearLayout
         android:layout_width="320dp"
         android:layout_height="40dp"
         android:layout_gravity="center"
         android:background="#FFFFFF"
-        android:layout_marginTop="20dp"
-        >
+        android:layout_marginTop="20dp">
 
     </LinearLayout>
-    <ListView
-        android:layout_width="320dp"
-        android:layout_height="269dp"
-        android:id="@+id/listview"
-        android:padding="10dp"
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+        android:id="@+id/foto"
+        android:layout_width="128dp"
+        android:layout_height="85dp"
         android:layout_marginTop="20dp"
-        android:layout_gravity="center"
-        android:background="#FFFF">
+        android:layout_marginLeft="10dp"
+       />
 
-    </ListView>
+        <TextView
+            android:id="@+id/nombre_grupo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp"
+            android:textColor="@color/colorPrimaryDark"/>
 
-    <ImageView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:src="@drawable/btnmas"
-        android:layout_gravity="center"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="100dp"
-        />
+        <TextView
+            android:id="@+id/fecha_grupo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:textSize="12dp"
+            android:textColor="@color/colorPrimaryDark"
+            />
+
+
+
+    </LinearLayout>
+
 </LinearLayout>
