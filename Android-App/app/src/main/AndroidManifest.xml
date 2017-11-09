@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".CrearGrupoActivity"
+            android:name=".GrupoActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -23,9 +23,7 @@
 
         <activity android:name=".RegistrarseActivity"/>
 
-        <activity android:name=".MainActivity"/>
-
-        <activity android:name=".GrupoActivity"/>
+        <activity android:name=".CrearGrupoActivity"/>
 
         <activity android:name=".LoginActivity"/>
 
