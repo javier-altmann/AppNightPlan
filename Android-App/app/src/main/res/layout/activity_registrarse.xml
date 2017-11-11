@@ -10,11 +10,10 @@
 
 
     <ImageView
-        android:layout_width="150dp"
-        android:layout_height="160dp"
+        android:layout_width="120dp"
+        android:layout_height="130dp"
         android:layout_gravity="center"
         android:src="@drawable/logofondotransparente"
-        android:layout_marginTop="10dp"
         />
 
     <EditText
@@ -26,7 +25,7 @@
         android:textAlignment="center"
         android:backgroundTint="#FFFFFFFF"
         android:textSize="20dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="5dp"
         android:fontFamily="@font/montserratregular"
         />
     <EditText
@@ -38,7 +37,7 @@
         android:textAlignment="center"
         android:textSize="20dp"
         android:backgroundTint="#FFFFFFFF"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5dp"
         android:fontFamily="@font/montserratregular"
         />
 
@@ -54,7 +53,7 @@
         android:textAlignment="center"
         android:textSize="20dp"
         android:backgroundTint="#FFFFFFFF"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:fontFamily="@font/montserratregular"
 
         />
@@ -69,7 +68,7 @@
         android:textAlignment="center"
         android:textSize="20dp"
         android:backgroundTint="#FFFFFFFF"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5dp"
         android:fontFamily="@font/montserratregular"
         />
 
@@ -83,7 +82,7 @@
         android:textAlignment="center"
         android:textSize="20dp"
         android:backgroundTint="#FFFFFFFF"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5dp"
         android:fontFamily="@font/montserratregular"
         />
     <Button
@@ -100,31 +99,30 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="42dp"
-        android:layout_marginTop="35dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="17dp"
         android:background="#FFFFFF">
 
 
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="35dp"
-            android:src="@drawable/btnfb"
-            android:layout_marginLeft="20dp"/>
 
         <TextView
         android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:background="#FFFF"
-        android:text="Registrate con Facebook"
+        android:text="Registrate con"
         android:textSize="20dp"
         android:textAlignment="center"
         android:textColor="#151431"
-        android:layout_marginLeft="50dp"
+        android:layout_marginLeft="80dp"
         android:fontFamily="@font/montserratregular"
         android:textStyle="bold"
         android:layout_marginTop="5dp"
-
         />
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            android:src="@drawable/btnfb"
+            />
     </LinearLayout>
 </LinearLayout>
 

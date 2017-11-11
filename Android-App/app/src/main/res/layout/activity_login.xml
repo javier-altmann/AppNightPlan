@@ -11,7 +11,7 @@
     <ImageView
         android:layout_width="190dp"
         android:layout_height="190dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:layout_gravity="center"
         android:src="@drawable/logofondotransparente"
 
@@ -25,7 +25,7 @@
         android:textColorHint="#FFFFFF"
         android:textAlignment="center"
         android:layout_marginBottom="20dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="10dp"
         android:textSize="20dp"
         android:backgroundTint="#FFFFFFFF"
         android:fontFamily="@font/montserratregular"
@@ -42,14 +42,14 @@
         android:textColorHint="#FFFFFF"
         android:textAlignment="center"
         android:layout_marginBottom="20dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="20dp"
         android:textSize="20dp"
         android:backgroundTint="#FFFFFFFF"
         android:fontFamily="@font/montserratregular"
         >
     </EditText>
     <Button
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="15dp"
         android:layout_width="250dp"
         android:layout_marginLeft="70dp"
         android:layout_height="wrap_content"
@@ -64,11 +64,11 @@
         android:layout_height="fill_parent"
         >
         <TextView
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="35dp"
             android:id="@+id/texto1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="70dp"
+            android:layout_marginLeft="30dp"
             android:text="No tenés cuenta? "
             android:textSize="20dp"
             android:textAlignment="center"
@@ -78,7 +78,7 @@
             />
         <TextView
 
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="33dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Registrate"
@@ -86,7 +86,7 @@
             android:textAlignment="center"
             android:textColor="#FFFF"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="52dp"
+            android:layout_marginRight="55dp"
             android:textStyle="bold"
             android:fontFamily="@font/montserratregular"
 

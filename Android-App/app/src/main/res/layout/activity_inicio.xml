@@ -27,7 +27,7 @@
             android:textColor="#FFFF"
             android:fontFamily="@font/montserratregular"
             android:textSize="40dp"
-            android:layout_marginLeft="50dp"
+            android:layout_marginLeft="60dp"
             android:textStyle="bold"/>
 
         <TextView
@@ -37,6 +37,7 @@
             android:textColor="#FFFF"
             android:fontFamily="@font/montserratregular"
             android:textSize="40dp"
+            android:layout_marginLeft="-60dp"
             />
 
     </LinearLayout>

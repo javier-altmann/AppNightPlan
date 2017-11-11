@@ -13,11 +13,11 @@ public class Establecimiento {
     private String address;
     private String barrio;
     private String phone;
-    private boolean destacado;
-    private String image;
+    private int destacado;
+    private int image;
     private Context context;
 
-    public Establecimiento(int idEstablecimiento, String name, String address, String barrio, String phone, boolean destacado, String image, Context context) {
+    public Establecimiento(int idEstablecimiento, String name, String address, String barrio, String phone, int destacado, int image, Context context) {
         this.idEstablecimiento = idEstablecimiento;
         this.name = name;
         this.address = address;
@@ -26,6 +26,15 @@ public class Establecimiento {
         this.destacado = destacado;
         this.image = image;
         this.context = context;
+    }
+
+    public Establecimiento(Context context,int idEstablecimiento, int image, String name,String barrio, int destacado){
+        this.idEstablecimiento = idEstablecimiento;
+        this.name = name;
+        this.image = image;
+        this.context = context;
+        this.barrio = barrio;
+        this.destacado = destacado;
     }
 
     public Context getContext() {
@@ -76,19 +85,19 @@ public class Establecimiento {
         this.phone = phone;
     }
 
-    public boolean isDestacado() {
+    public int isDestacado() {
         return destacado;
     }
 
-    public void setDestacado(boolean destacado) {
+    public void setDestacado(int destacado) {
         this.destacado = destacado;
     }
 
-    public String getImage() {
+    public int getImage() {
         return image;
     }
 
-    public void setImage(String image) {
+    public void setImage(int image) {
         this.image = image;
     }
 }
