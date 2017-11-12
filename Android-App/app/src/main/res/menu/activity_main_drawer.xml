@@ -16,18 +16,18 @@
             android:title="Historial"
             />
 
-        <item
-            android:id="@+id/nav_cuenta"
-            android:title="Mi cuenta"
-            />
 
-        <item
-            android:id="@+id/nav_cerrar_sesion"
-            android:title="Cerrar sesion"
-
-            />
     </group>
 
+    <item
+        android:id="@+id/nav_cuenta"
+        android:title="Mi cuenta"
+        />
 
+    <item
+        android:id="@+id/nav_cerrar_sesion"
+        android:title="Cerrar sesion"
+
+        />
 
 </menu>
