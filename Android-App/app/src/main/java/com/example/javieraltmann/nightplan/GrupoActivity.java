@@ -1,5 +1,6 @@
 package com.example.javieraltmann.nightplan;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -53,15 +54,20 @@ public class GrupoActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_inicio) {
-            // Handle the camera action
+
+            Intent intent = new Intent(getBaseContext(), InicioActivity.class);
+            this.startActivity(intent);
         } else if (id == R.id.nav_mis_grupos) {
 
-        } else if (id == R.id.nav_historial) {
+            Intent intent = new Intent(getBaseContext(), GrupoActivity.class);
+            this.startActivity(intent);
 
-        } else if (id == R.id.nav_cuenta) {
+        }  else if (id == R.id.nav_cuenta) {
+
 
         } else if (id == R.id.nav_cerrar_sesion) {
-
+            Intent intent = new Intent(getBaseContext(), LoginActivity.class);
+            this.startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
