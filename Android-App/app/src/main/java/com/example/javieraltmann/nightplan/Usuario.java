@@ -27,6 +27,14 @@ public class Usuario {
         this.context = context;
     }
 
+    public Usuario(String username, String password, Context context) {
+        this.username = username;
+        this.password = password;
+        this.context = context;
+
+    }
+
+
     public String getUsername() {
         return username;
     }
@@ -90,4 +98,6 @@ public class Usuario {
     public void setContext(Context context) {
         this.context = context;
     }
+
+
 }
