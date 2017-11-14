@@ -1,4 +1,4 @@
-package com.example.javieraltmann.nightplan;
+package com.example.javieraltmann.nightplan.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,6 +7,9 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.javieraltmann.nightplan.Models.Grupo;
+import com.example.javieraltmann.nightplan.R;
 
 import java.util.List;
 

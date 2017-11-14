@@ -1,9 +1,11 @@
-package com.example.javieraltmann.nightplan;
+package com.example.javieraltmann.nightplan.Tabs;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.javieraltmann.nightplan.R;
 
 /**
  * Created by javier.altmann on 12/11/2017.

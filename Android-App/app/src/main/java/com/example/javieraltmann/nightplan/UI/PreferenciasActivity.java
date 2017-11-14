@@ -1,4 +1,4 @@
-package com.example.javieraltmann.nightplan;
+package com.example.javieraltmann.nightplan.UI;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -6,6 +6,11 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+
+import com.example.javieraltmann.nightplan.R;
+import com.example.javieraltmann.nightplan.Tabs.TabBarrios;
+import com.example.javieraltmann.nightplan.Tabs.TabCaracteristicas;
+import com.example.javieraltmann.nightplan.Tabs.TabGastronomia;
 
 
 public class PreferenciasActivity extends AppCompatActivity

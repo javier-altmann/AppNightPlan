@@ -4,13 +4,19 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/ColorMenu</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+    <style name="MenuHamburguesa" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:textColorPrimary">#ffff</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+
     </style>
 
 
@@ -21,10 +27,12 @@
     <style name="NoToolbarTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
     </style>
+
+    <style name="PrferenciasTabTheme" parent="Widget.Design.TabLayout">
+        <item name="android:textSize">1dp</item> <!---ESTO NO FUNCIONA,REVISAR COMO ACHICAR EL TAMAÑO DEL TAB -->
+    </style>
+
 
 </resources>
 

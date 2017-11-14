@@ -1,4 +1,4 @@
-package com.example.javieraltmann.nightplan;
+package com.example.javieraltmann.nightplan.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,7 +8,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+import com.example.javieraltmann.nightplan.Models.Establecimiento;
+import com.example.javieraltmann.nightplan.R;
 
 import java.util.List;
 

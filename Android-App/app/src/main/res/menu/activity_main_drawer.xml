@@ -11,10 +11,7 @@
             android:id="@+id/nav_mis_grupos"
             android:title="Mis grupos" />
 
-        <item
-            android:id="@+id/nav_historial"
-            android:title="Historial"
-            />
+
 
 
     </group>

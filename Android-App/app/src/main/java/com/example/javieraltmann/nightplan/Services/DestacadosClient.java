@@ -1,4 +1,6 @@
-package com.example.javieraltmann.nightplan;
+package com.example.javieraltmann.nightplan.Services;
+
+import com.example.javieraltmann.nightplan.Models.Establecimiento;
 
 import java.util.List;
 
@@ -9,8 +11,8 @@ import retrofit2.http.GET;
  * Created by javier.altmann on 12/11/2017.
  */
 
-public interface DestacadosService {
+public interface DestacadosClient {
 
-    @GET("API/test")
+    @GET("API/lugares-destacados")
     void getEstablecimientos(Callback<List<Establecimiento>> callback);
 }

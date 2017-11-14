@@ -1,4 +1,4 @@
-package com.example.javieraltmann.nightplan;
+package com.example.javieraltmann.nightplan.UI;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +10,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.ListView;
+
+import com.example.javieraltmann.nightplan.Models.Grupo;
+import com.example.javieraltmann.nightplan.Adapter.GrupoAdapter;
+import com.example.javieraltmann.nightplan.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -55,7 +59,7 @@ public class GrupoActivity extends AppCompatActivity
 
         if (id == R.id.nav_inicio) {
 
-            Intent intent = new Intent(getBaseContext(), InicioActivity.class);
+            Intent intent = new Intent(getBaseContext(), DestacadosActivity.class);
             this.startActivity(intent);
         } else if (id == R.id.nav_mis_grupos) {
 

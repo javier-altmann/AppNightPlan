@@ -8,26 +8,29 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme.NoActionBar">
         <activity
-            android:name=".LoginActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:name=".UI.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".InicioActivity"/>
+        <activity android:name=".UI.DestacadosActivity"
+            android:label="Destacados"/>
+        <activity android:name=".UI.InicioActivity"/>  <!-- NO TIENE TOOLBAR-->
 
-        <activity android:name=".GrupoActivity"
-                  android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".UI.PreferenciasActivity"
+                  /> <!-- HAY QUE AGREGAR EL NOMBRE EN EL LAYOUT CUANDO SE AGREGUE EL TOOLBAR -->
+        <activity android:name=".UI.CrearGrupoActivity"
+            android:label="@string/crear_grupos" />
 
-        <activity android:name=".CrearGrupoActivity"/>
 
-        <activity android:name=".RegistrarseActivity"
-                  android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".UI.GrupoActivity"
+            android:label="@string/mis_grupos"/>
+
+        <activity android:name=".UI.RegistrarseActivity" /> <!-- NO TIENE TOOLBAR-->
 
     </application>
 
