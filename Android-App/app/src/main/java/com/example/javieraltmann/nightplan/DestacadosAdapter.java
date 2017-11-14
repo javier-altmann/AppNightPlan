@@ -51,14 +51,14 @@ public class DestacadosAdapter extends BaseAdapter {
         ImageView fotoImg = (ImageView) destacadosView.findViewById(R.id.foto_establecimiento);
         TextView nombreTv = (TextView) destacadosView.findViewById(R.id.nombre_establecimiento);
         TextView barrioTv = (TextView) destacadosView.findViewById((R.id.barrio));
-        ImageView destacadoImg = (ImageView) destacadosView.findViewById(R.id.destacado);
+
 
         Establecimiento destacados = destacadosList.get(i);
 
         fotoImg.setImageResource(destacados.getImage());
         nombreTv.setText(destacados.getName());
         barrioTv.setText(destacados.getBarrio());
-        destacadoImg.setImageResource(destacados.isDestacado());
+
 
 
 

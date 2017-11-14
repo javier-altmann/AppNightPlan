@@ -22,7 +22,7 @@
         android:layout_marginLeft="50dp"
         android:textColor="#FFFFFF"
         android:hint="Usuario"
-        android:textColorHint="#FFFFFF"
+            android:textColorHint="#FFFFFF"
         android:textAlignment="center"
         android:layout_marginBottom="20dp"
         android:layout_marginTop="10dp"
