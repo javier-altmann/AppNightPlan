@@ -1,8 +1,15 @@
 <resources>
-    <string name="app_name">NightPlan</string>
+    <string name="app_name">Night Plan</string>
+    <string name="mis_grupos">Mis Grupos</string>
+    <string name="crear_grupos">Crear Grupos</string>
+    <string name="mis_preferencias">Mis preferencias</string>
+
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    <string name="title_activity_preferencias">PreferenciasActivity</string>
+
+
 </resources>
