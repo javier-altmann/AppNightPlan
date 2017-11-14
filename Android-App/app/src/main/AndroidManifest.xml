@@ -27,17 +27,15 @@
             android:label="@string/crear_grupos" />
 
 
-        <activity android:name=".RegistrarseActivity"/>
-        <activity android:name=".DestacadosActivity"/>
+        <activity android:name=".UI.RegistrarseActivity"/>
 
 
 
 
-        <activity android:name=".GrupoActivity"/>
-        <activity android:name=".UI.GrupoActivity"
+        <activity android:name="UI.GrupoActivity"
             android:label="@string/mis_grupos"/>
 
-        <activity android:name=".UI.RegistrarseActivity" /> <!-- NO TIENE TOOLBAR-->
+       
 
     </application>
 
