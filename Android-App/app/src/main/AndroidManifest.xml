@@ -5,10 +5,9 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme.NoActionBar">
         <activity
             android:name=".UI.LoginActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -19,20 +18,23 @@
         </activity>
 
 
-        <activity android:name=".UI.RegistrarseActivity"/> <!-- Es la pantalla de registrarse -->
+        <activity android:name=".UI.RegistrarseActivity" /> <!-- Es la pantalla de registrarse -->
 
-        <activity android:name=".UI.GrupoActivity"/> <!-- Es la pantalla de los grupos que tiene el usuario -->
+        <activity android:name=".UI.GrupoActivity"
+            android:label="@string/mis_grupos"/> <!-- Es la pantalla de los grupos que tiene el usuario -->
 
-        <activity android:name=".UI.CrearGrupoActivity"/> <!-- Es la pantalla crear grupos -->
+        <activity android:name=".UI.CrearGrupoActivity"
+            android:label="@string/crear_grupos" /> <!-- Es la pantalla crear grupos -->
 
-        <activity android:name=".UI.DestacadosActivity"/> <!-- Es la pantalla de destacados -->
+        <activity android:name=".UI.DestacadosActivity"
+            android:label="@string/destacados"/> <!-- Es la pantalla de destacados -->
 
         <activity android:name=".UI.InicioActivity"/> <!-- Es la pantalla numero 1 de la app -->
 
 
 
 
-        <activity android:name=".UI.DestacadosActivity"/>
+
 
     </application>
 
