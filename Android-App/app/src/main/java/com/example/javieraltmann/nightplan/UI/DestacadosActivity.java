@@ -43,10 +43,12 @@ public class DestacadosActivity extends AppCompatActivity
 
 
             List<Establecimiento> destacadosList = new ArrayList<>();
-            destacadosList.add(new Establecimiento(getBaseContext(), 1,  R.drawable.imagen2,"Antares" , "palermo", R.drawable.imagen2));
-            destacadosList.add(new Establecimiento(getBaseContext(), 2, R.drawable.imagen2, "Antares", "palermo", R.drawable.imagen2));
-            destacadosList.add(new Establecimiento(getBaseContext(), 3, R.drawable.imagen2, "Antares","Belgrano", R.drawable.imagen2));
-            destacadosList.add(new Establecimiento(getBaseContext(), 4, R.drawable.imagen2, "Antares","Recoleta", R.drawable.imagen2));
+            destacadosList.add(new Establecimiento(getBaseContext(), 1,  R.drawable.antares,"Antares" , "Palermo", R.drawable.imagen2));
+            destacadosList.add(new Establecimiento(getBaseContext(), 2, R.drawable.jobs, "JOBS", "Recoleta", R.drawable.imagen2));
+            destacadosList.add(new Establecimiento(getBaseContext(), 3, R.drawable.tazz, "Tazz","Palermo", R.drawable.imagen2));
+            destacadosList.add(new Establecimiento(getBaseContext(), 4, R.drawable.heisenburguer, "Heisenburger","Belgrano", R.drawable.imagen2));
+            destacadosList.add(new Establecimiento(getBaseContext(), 5, R.drawable.antares, "Antares","Palermo", R.drawable.imagen2));
+            destacadosList.add(new Establecimiento(getBaseContext(), 6, R.drawable.jobs, "JOBS","Recoleta", R.drawable.imagen2));
 
             GridView destacadosGv = (GridView) findViewById(R.id.DestacadoGv);
             destacadosGv.setAdapter(new DestacadosAdapter(getBaseContext(), destacadosList));
