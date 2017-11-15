@@ -32,10 +32,6 @@
         <activity android:name=".UI.InicioActivity"/> <!-- Es la pantalla numero 1 de la app -->
 
 
-
-
-
-
     </application>
 
 </manifest>
