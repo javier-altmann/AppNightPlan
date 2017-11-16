@@ -16,8 +16,10 @@ tools:openDrawer="start">
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#30cbbd"
-        android:id="@+id/toolbar"/>
+        android:background="@color/ColorMenu"
+        app:theme="@style/MenuHamburguesa"
+        android:id="@+id/toolbar"
+        />
 
 
     <GridView xmlns:android="http://schemas.android.com/apk/res/android"

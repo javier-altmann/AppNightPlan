@@ -1,4 +1,4 @@
-package com.example.javieraltmann.nightplan;
+package com.example.javieraltmann.nightplan.Models;
 
 import android.content.Context;
 
@@ -26,6 +26,14 @@ public class Usuario {
         this.imagen = imagen;
         this.context = context;
     }
+
+    public Usuario(String username, String password, Context context) {
+        this.username = username;
+        this.password = password;
+        this.context = context;
+
+    }
+
 
     public String getUsername() {
         return username;
@@ -90,4 +98,6 @@ public class Usuario {
     public void setContext(Context context) {
         this.context = context;
     }
+
+
 }

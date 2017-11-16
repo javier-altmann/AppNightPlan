@@ -1,4 +1,4 @@
-package com.example.javieraltmann.nightplan;
+package com.example.javieraltmann.nightplan.Models;
 
 /**
  * Created by javier.altmann on 5/11/2017.
