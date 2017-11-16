@@ -14,12 +14,12 @@ import com.example.javieraltmann.nightplan.R;
  * Created by javier.altmann on 4/11/2017.
  */
 
-public class GrupoClubActivity extends AppCompatActivity
+public class GrupoDestacadosActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_grupo_club);
+        setContentView(R.layout.activity_grupo_preferencias);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

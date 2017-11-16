@@ -31,6 +31,9 @@
 
         <activity android:name=".UI.InicioActivity"/> <!-- Es la pantalla numero 1 de la app -->
 
+        <activity android:name=".UI.GrupoDestacadosActivity"
+                  android:label="Grupo"/> <!-- Es la pantalla numero 1 de la app -->
+
 
     </application>
 
