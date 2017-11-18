@@ -9,21 +9,16 @@ import android.content.Context;
 public class Usuario {
     private String username;
     private String password;
-    private String name;
-    private String lastName;
-    private int age;
-    private String birthDate;
-    private String imagen;
+    private String nombre;
+    private String apellido;
+    private String email;
     private Context context;
 
-    public Usuario(String username, String password, String name, String lastName, int age, String birthDate, String imagen, Context context) {
+    public Usuario(String username, String password, String name, String lastName, String imagen, Context context) {
         this.username = username;
         this.password = password;
-        this.name = name;
-        this.lastName = lastName;
-        this.age = age;
-        this.birthDate = birthDate;
-        this.imagen = imagen;
+        this.nombre = name;
+        this.apellido = lastName;
         this.context = context;
     }
 
@@ -33,7 +28,6 @@ public class Usuario {
         this.context = context;
 
     }
-
 
     public String getUsername() {
         return username;
@@ -51,44 +45,28 @@ public class Usuario {
         this.password = password;
     }
 
-    public String getName() {
-        return name;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getApellido() {
+        return apellido;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
     }
 
-    public int getAge() {
-        return age;
+    public String getEmail() {
+        return email;
     }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public String getBirthDate() {
-        return birthDate;
-    }
-
-    public void setBirthDate(String birthDate) {
-        this.birthDate = birthDate;
-    }
-
-    public String getImagen() {
-        return imagen;
-    }
-
-    public void setImagen(String imagen) {
-        this.imagen = imagen;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public Context getContext() {
@@ -98,6 +76,4 @@ public class Usuario {
     public void setContext(Context context) {
         this.context = context;
     }
-
-
 }

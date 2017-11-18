@@ -39,7 +39,7 @@ public class GrupoAdapter extends BaseAdapter {
 
     @Override
     public long getItemId(int i) {
-        return grupoList.get(i).getIdGroup();
+        return grupoList.get(i).getId();
     }
 
     @Override
@@ -52,9 +52,9 @@ public class GrupoAdapter extends BaseAdapter {
 
         Grupo grupo = grupoList.get(i);
 
-        fotoImg.setImageResource(grupo.getFoto());
-        nombreTv.setText(grupo.getName());
-        fechaTv.setText(grupo.getFechaDeCreacion());
+        fotoImg.setImageResource(grupo.getFotoDelGrupo());
+        nombreTv.setText(grupo.getNombreDelGrupo());
+        fechaTv.setText(grupo.getFecha());
 
 
         return grupoView;

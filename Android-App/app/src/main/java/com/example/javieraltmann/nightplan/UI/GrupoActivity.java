@@ -9,13 +9,14 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.widget.ListView;
 
 import com.example.javieraltmann.nightplan.Models.Grupo;
-import com.example.javieraltmann.nightplan.Adapter.GrupoAdapter;
+import com.example.javieraltmann.nightplan.ParseoJson;
 import com.example.javieraltmann.nightplan.R;
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -24,6 +25,12 @@ import java.util.List;
 
 public class GrupoActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+
+    private List<Grupo> gruposList;
+    private ParseoJson parse;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,7 +49,8 @@ public class GrupoActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
 
-        List<Grupo> grupoList = new ArrayList<>();
+        // List<Grupo> grupoList = new ArrayList<>();
+        /*
         grupoList.add(new Grupo(getBaseContext(), 1, "Boca", R.drawable.imagen2, "05-11-2017"));
         grupoList.add(new Grupo(getBaseContext(), 2, "River", R.drawable.imagen2, "06-11-2017"));
         grupoList.add(new Grupo(getBaseContext(), 3, "Racing", R.drawable.imagen2, "07-11-2017"));
@@ -50,6 +58,13 @@ public class GrupoActivity extends AppCompatActivity
 
         ListView grupoLv = (ListView) findViewById(R.id.crear_grupo_lv);
         grupoLv.setAdapter(new GrupoAdapter(getBaseContext(), grupoList));
+        */
+
+        parse = new ParseoJson();
+        System.out.println("Lectura Json terminada");
+        String jsonString = parse.readMockJsonFile(this);
+        gruposList = Arrays.asList(new Gson().fromJson(new Gson().fromJson(jsonString, JsonObject.class).get("grupos").toString(), Grupo[].class));
+        return;
     }
 
     @Override

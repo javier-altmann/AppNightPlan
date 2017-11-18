@@ -2,73 +2,68 @@ package com.example.javieraltmann.nightplan.Models;
 
 import android.content.Context;
 
+import java.util.List;
+
 /**
  * Created by Caro on 4/11/2017.
  */
 
 public class Grupo {
-    private int idGroup;
-    private String name;
-    private Usuario participantesDelGrupo;
-    private String fechaDeCreacion;
-    private int foto;
+    private int id;
+    private String nombreDelGrupo;
+    private String fecha;
+    private int fotoDelGrupo;
+    private List<Usuario> usuariosList;
     private Context context;
 
-    public Grupo(Context context , int idGroup, String name, Usuario participantesDelGrupo, String fechaDeCreacion) {
-        this.idGroup = idGroup;
-        this.name = name;
-        this.participantesDelGrupo = participantesDelGrupo;
-        this.fechaDeCreacion = fechaDeCreacion;
+    public Grupo(int id, String nombreDelGrupo, String fecha, int fotoDelGrupo, List<Usuario> usuariosList, Context context) {
+        this.id = id;
+        this.nombreDelGrupo = nombreDelGrupo;
+        this.fecha = fecha;
+        this.fotoDelGrupo = fotoDelGrupo;
+        this.usuariosList = usuariosList;
         this.context = context;
     }
 
-    public Grupo(Context context, int idGroup, String name, int foto, String fechaDeCreacion){
-        this.idGroup = idGroup;
-        this.name = name;
-        this.foto = foto;
-        this.fechaDeCreacion = fechaDeCreacion;
-        this.context = context;
+
+    public int getId() {
+        return id;
     }
 
-    public void setFoto(int foto) {
-        this.foto = foto;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public int getFoto() {
-        return foto;
+    public String getNombreDelGrupo() {
+        return nombreDelGrupo;
     }
 
-    public int getIdGroup() {
-        return idGroup;
+    public void setNombreDelGrupo(String nombreDelGrupo) {
+        this.nombreDelGrupo = nombreDelGrupo;
     }
 
-    public void setIdGroup(int idGroup) {
-        this.idGroup = idGroup;
+    public String getFecha() {
+        return fecha;
     }
 
-    public String getName() {
-        return name;
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public int getFotoDelGrupo() {
+        return fotoDelGrupo;
     }
 
-    public Usuario getParticipantesDelGrupo() {
-        return participantesDelGrupo;
+    public void setFotoDelGrupo(int fotoDelGrupo) {
+        this.fotoDelGrupo = fotoDelGrupo;
     }
 
-    public void setParticipantesDelGrupo(Usuario participantesDelGrupo) {
-        this.participantesDelGrupo = participantesDelGrupo;
+    public List<Usuario> getUsuariosList() {
+        return usuariosList;
     }
 
-
-    public String getFechaDeCreacion() {
-        return fechaDeCreacion;
-    }
-
-    public void setFechaDeCreacion(String fechaDeCreacion) {
-        this.fechaDeCreacion = fechaDeCreacion;
+    public void setUsuariosList(List<Usuario> usuariosList) {
+        this.usuariosList = usuariosList;
     }
 
     public Context getContext() {
@@ -79,3 +74,6 @@ public class Grupo {
         this.context = context;
     }
 }
+
+
+

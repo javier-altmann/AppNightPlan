@@ -1,25 +1,19 @@
 package com.example.javieraltmann.nightplan.Services;
 
-import com.example.javieraltmann.nightplan.Models.Usuario;
-
-import java.util.List;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.http.Body;
-import retrofit2.http.GET;
-import retrofit2.http.POST;
+import android.content.Context;
 
 /**
- * Created by javier.altmann on 12/11/2017.
+ * Created by javier.altmann on 17/11/2017.
  */
 
-public interface UsuarioClient {
+public class UsuarioClient {
+    private static Context context;
+    private static UsuarioApi client;
 
-    @GET("API/usuarios")
-    void getUsuario(Callback<List<Usuario>> callback);
+    //Necesario inicializar el contexto para usar esta clase
+    public static void init(Context con) {
+        context = con;
+    }
 
-    @POST("usuario/nuevo")
-    Call<Usuario> createUser(@Body Usuario user);
 
 }

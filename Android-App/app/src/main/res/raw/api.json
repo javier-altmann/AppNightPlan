@@ -1,0 +1,186 @@
+{
+
+    "grupos": [
+        {
+        "id": 1,
+        "nombreDelGrupo":"grupo1",
+        "fecha": "10-05-2017",
+        "fotoDelGrupo":1,
+        "usuariosList":[
+            {
+                "id": 1,
+                "username": "javier.altmann",
+                "password":"javier",
+                "nombre":  "Javier",
+                "apellido": "Altmann",
+                "email": "javier.altmann@hotmail.com"
+
+            },
+            {
+                "id": 2,
+                "username": "cristian.rivera",
+                "password":"cristian",
+                "nombre":  "Cristian",
+                "apellido": "Rivera",
+                "email": "cristian.rivera@hotmail.com"
+
+            },
+            {
+                "id": 3,
+                "username": "test",
+                "password":"test",
+                "nombre":  "Test",
+                "apellido": "Test",
+                "email": "test@hotmail.com"
+
+
+            }
+
+        ]
+
+    },
+        {
+            "id": 2,
+            "nombreDelGrupo":"grupo2",
+            "fecha": "15-06-2017",
+            "fotoDelGrupo":2,
+            "usuariosList":[
+                {
+                    "id": 1,
+                    "username": "javier.altmann",
+                    "password":"javier",
+                    "nombre":  "Javier",
+                    "apellido": "Altmann",
+                    "email": "javier.altmann@hotmail.com"
+
+                },
+                {
+                    "id": 2,
+                    "username": "cristian.rivera",
+                    "password":"cristian",
+                    "nombre":  "Cristian",
+                    "apellido": "Rivera",
+                    "email": "cristian.rivera@hotmail.com"
+
+                }
+
+            ]
+
+        },
+        {
+            "id": 3,
+            "nombreDelGrupo":"grupo3",
+            "fecha": "10-04-2017",
+            "fotoDelGrupo":3,
+            "usuariosList":[
+                {
+                    "id": 1,
+                    "username": "javier.altmann",
+                    "password":"javier",
+                    "nombre":  "Javier",
+                    "apellido": "Altmann",
+                    "email": "javier.altmann@hotmail.com"
+
+                },
+                {
+                    "id": 4,
+                    "username": "pedro.gonzalez",
+                    "password":"pedro",
+                    "nombre":  "Pedro",
+                    "apellido": "Gonzalez",
+                    "email": "pedro.gonzalez@hotmail.com"
+
+                },
+                {
+                    "id": 5,
+                    "username": "martin.gomez",
+                    "password":"martin123",
+                    "nombre":  "Martin",
+                    "apellido": "Gomez",
+                    "email": "martin.gome<@hotmail.com"
+
+
+                }
+
+            ]
+
+
+        },
+        {
+            "id": 4,
+            "nombreDelGrupo":"grupo4",
+            "fecha": "14-08-2017",
+            "fotoDelGrupo": 4,
+            "usuariosList":[
+                {
+                    "id": 1,
+                    "username": "javier.altmann",
+                    "password":"javier",
+                    "nombre":  "Javier",
+                    "apellido": "Altmann",
+                    "email": "javier.altmann@hotmail.com"
+
+                },
+                {
+                    "id": 2,
+                    "username": "cristian.rivera",
+                    "password":"cristian",
+                    "nombre":  "Cristian",
+                    "apellido": "Rivera",
+                    "email": "cristian.rivera@hotmail.com"
+
+                },
+                {
+                    "id": 3,
+                    "username": "test",
+                    "password":"test",
+                    "nombre":  "Test",
+                    "apellido": "Test",
+                    "email": "test@hotmail.com"
+
+
+                }
+
+            ]
+
+        },
+        {
+            "id": 5,
+            "nombreDelGrupo": "grupo5",
+            "fecha": "03-02-2017",
+            "fotoDelGrupo": 5,
+            "usuariosList": [
+                {
+                    "id": 6,
+                    "username": "peter.garcia",
+                    "password": "pet",
+                    "nombre": "Peter",
+                    "apellido": "Garcia",
+                    "email": "peter.garcia@hotmail.com"
+                },
+                {
+                    "id": 7,
+                    "username": "luquitas.gonzalez",
+                    "password": "l12",
+                    "nombre": "Lucas",
+                    "apellido": "Gonzalez",
+                    "email": "lucas.gonzalez@hotmail.com"
+                },
+                {
+                    "id": 8,
+                    "username": "hernan.perez",
+                    "password": "h929s",
+                    "nombre": "Hernan",
+                    "apellido": "Perez",
+                    "email": "h.perez@hotmail.com"
+                }
+            ]
+        }
+    ]
+}
+
+
+
+            
+
+

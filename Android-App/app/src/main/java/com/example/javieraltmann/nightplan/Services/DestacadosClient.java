@@ -1,18 +1,19 @@
 package com.example.javieraltmann.nightplan.Services;
 
-import com.example.javieraltmann.nightplan.Models.Establecimiento;
-
-import java.util.List;
-
-import retrofit2.Callback;
-import retrofit2.http.GET;
+import android.content.Context;
 
 /**
- * Created by javier.altmann on 12/11/2017.
+ * Created by javier.altmann on 17/11/2017.
  */
 
-public interface DestacadosClient {
+public class DestacadosClient {
 
-    @GET("API/lugares-destacados")
-    void getEstablecimientos(Callback<List<Establecimiento>> callback);
+    private static Context context;
+    private static DestacadosClient client;
+
+    //Necesario inicializar el contexto para usar esta clase
+    public static void init(Context con) {
+        context = con;
+    }
+
 }

@@ -16,15 +16,13 @@
         <android.support.v7.widget.Toolbar
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/ColorMenu"
-            android:id="@+id/toolbar"
-            app:theme="@style/MenuHamburguesa"
-            />
+            android:background="#30cbbd"
+            android:id="@+id/toolbar"/>
 
         <include
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            layout="@layout/content_grupo_resultados"
+            layout="@layout/content_votacion"
             />
 
 
