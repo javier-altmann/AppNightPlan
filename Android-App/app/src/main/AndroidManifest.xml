@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.javieraltmann.nightplan">
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -9,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
         <activity
-            android:name=".UI.GrupoActivity"
+            android:name=".UI.DestacadosActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,13 +21,13 @@
 
         <activity android:name=".UI.RegistrarseActivity" /> <!-- Es la pantalla de registrarse -->
 
-        <activity android:name=".UI.LoginActivity"
+        <activity android:name=".UI.GrupoActivity"
             android:label="@string/mis_grupos"/> <!-- Es la pantalla de los grupos que tiene el usuario -->
 
         <activity android:name=".UI.CrearGrupoActivity"
             android:label="@string/crear_grupos" /> <!-- Es la pantalla crear grupos -->
 
-        <activity android:name=".UI.DestacadosActivity"
+        <activity android:name=".UI.ResultadosActivity"
             android:label="@string/destacados"/> <!-- Es la pantalla de destacados -->
 
         <activity android:name=".UI.InicioActivity"/> <!-- Es la pantalla numero 1 de la app -->
@@ -34,7 +35,7 @@
         <activity android:name=".UI.GrupoDestacadosActivity"
                   android:label="Grupo"/> <!-- Es la pantalla numero 1 de la app -->
 
-        <activity android:name=".UI.ResultadosActivity"
+        <activity android:name=".UI.LoginActivity"
             android:label="Grupo"/> <!-- Es la pantalla de resultados -->
 
 

@@ -12,10 +12,11 @@ import android.view.MenuItem;
 import android.widget.GridView;
 
 import com.example.javieraltmann.nightplan.Adapter.DestacadosAdapter;
-import com.example.javieraltmann.nightplan.Models.Establecimiento;
+import com.example.javieraltmann.nightplan.Models.Destacados;
 import com.example.javieraltmann.nightplan.R;
+import com.example.javieraltmann.nightplan.Services.DestacadosClient;
+import com.example.javieraltmann.nightplan.Services.OnSuccessCallback;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -40,7 +41,7 @@ public class DestacadosActivity extends AppCompatActivity
 
             NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
             navigationView.setNavigationItemSelectedListener(this);
-
+/*
 
             List<Establecimiento> destacadosList = new ArrayList<>();
             destacadosList.add(new Establecimiento(getBaseContext(), 1,  R.drawable.antares,"Antares" , "Palermo", R.drawable.imagen2));
@@ -52,6 +53,20 @@ public class DestacadosActivity extends AppCompatActivity
 
             GridView destacadosGv = (GridView) findViewById(R.id.DestacadoGv);
             destacadosGv.setAdapter(new DestacadosAdapter(getBaseContext(), destacadosList));
+
+
+
+*/
+            DestacadosClient.getDestacados(new OnSuccessCallback() {
+                @Override
+                public void execute(Object body) {
+
+                    GridView destacadosGv = (GridView) findViewById(R.id.DestacadoGv);
+                    destacadosGv.setAdapter(new DestacadosAdapter(getBaseContext(), (List<Destacados>) body));
+                }
+            });
+
+
         }
 
 

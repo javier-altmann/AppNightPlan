@@ -7,12 +7,17 @@ import android.content.Context;
  */
 
 public class Usuario {
+    private int id;
     private String username;
     private String password;
     private String nombre;
     private String apellido;
     private String email;
     private Context context;
+
+
+
+
 
     public Usuario(String username, String password, String name, String lastName, String imagen, Context context) {
         this.username = username;

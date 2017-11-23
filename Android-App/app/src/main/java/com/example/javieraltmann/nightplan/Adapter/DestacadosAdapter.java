@@ -8,7 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.javieraltmann.nightplan.Models.Establecimiento;
+import com.example.javieraltmann.nightplan.Models.Destacados;
 import com.example.javieraltmann.nightplan.R;
 
 import java.util.List;
@@ -21,9 +21,9 @@ public class DestacadosAdapter extends BaseAdapter {
 
 
     private Context context;
-    private List<Establecimiento> destacadosList;
+    private List<Destacados> destacadosList;
 
-    public DestacadosAdapter(Context context, List<Establecimiento> destacadosList) {
+    public DestacadosAdapter(Context context, List<Destacados> destacadosList) {
         this.destacadosList = destacadosList;
         this.context = context;
     }
@@ -41,7 +41,7 @@ public class DestacadosAdapter extends BaseAdapter {
 
     @Override
     public long getItemId(int i) {
-        return destacadosList.get(i).getIdEstablecimiento();
+        return destacadosList.get(i).getId();
     }
 
     @Override
@@ -54,10 +54,10 @@ public class DestacadosAdapter extends BaseAdapter {
         TextView barrioTv = (TextView) destacadosView.findViewById((R.id.barrio));
 
 
-        Establecimiento destacados = destacadosList.get(i);
+        Destacados destacados = destacadosList.get(i);
 
-        fotoImg.setImageResource(destacados.getImage());
-        nombreTv.setText(destacados.getName());
+        fotoImg.setImageResource(destacados.getImagen());
+        nombreTv.setText(destacados.getNombre());
         barrioTv.setText(destacados.getBarrio());
 
 

@@ -1,10 +1,10 @@
 package com.example.javieraltmann.nightplan.Services;
 
-import com.example.javieraltmann.nightplan.Models.Establecimiento;
+import com.example.javieraltmann.nightplan.Models.Destacados;
 
 import java.util.List;
 
-import retrofit2.Callback;
+import retrofit2.Call;
 import retrofit2.http.GET;
 
 /**
@@ -13,6 +13,7 @@ import retrofit2.http.GET;
 
 public interface DestacadosApi {
 
-    @GET("API/lugares-destacados")
-    void getEstablecimientos(Callback<List<Establecimiento>> callback);
+    @GET("lugares-destacados")
+    public Call<List<Destacados>> getDestacados();
+
 }

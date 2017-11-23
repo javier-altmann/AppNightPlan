@@ -60,6 +60,20 @@ public class GrupoActivity extends AppCompatActivity
         grupoLv.setAdapter(new GrupoAdapter(getBaseContext(), grupoList));
         */
 
+        /*
+        UsuarioClient.getUsuarios(new OnSuccessCallback() {
+            @Override
+            public void execute(Object body) {
+                //Lo que se debe hacer con la respuesta del servidor
+                ListView pizzaLv = (ListView) findViewById(R.id.pizza_lv); //El listview
+                //Le asigno el adapter, al cual le paso el contexto y la lista de pizzas que vino
+                pizzaLv.setAdapter(new PizzaAdapter(getBaseContext(), (List<Pizza>) body));
+                //Saco el Progress Dialog de la pantalla
+                progressDialog.dismiss();
+            }
+        });
+*/
+
         parse = new ParseoJson();
         System.out.println("Lectura Json terminada");
         String jsonString = parse.readMockJsonFile(this);

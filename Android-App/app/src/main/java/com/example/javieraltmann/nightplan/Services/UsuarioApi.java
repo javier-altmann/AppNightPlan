@@ -5,7 +5,6 @@ import com.example.javieraltmann.nightplan.Models.Usuario;
 import java.util.List;
 
 import retrofit2.Call;
-import retrofit2.Callback;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
@@ -16,8 +15,8 @@ import retrofit2.http.POST;
 
 public interface UsuarioApi {
 
-    @GET("API/usuarios")
-    void getUsuario(Callback<List<Usuario>> callback);
+    @GET("usuarios") //Verbo HTTP y nombre del metodo de la API
+    public Call<List<Usuario>> getUsuarios(); //El return type define como sera parseado automaticamente el response
 
     @POST("usuario/nuevo")
     Call<Usuario> createUser(@Body Usuario user);

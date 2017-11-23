@@ -8,10 +8,19 @@ public class Destacados {
 
     private int id;
     private String nombre;
-    private String imagen;
+    private int imagen;
     private String direccion;
     private String barrio;
     private String destacado;
+
+    public Destacados(int id, String nombre, int imagen, String direccion, String barrio, String destacado) {
+        this.id = id;
+        this.nombre = nombre;
+        this.imagen = imagen;
+        this.direccion = direccion;
+        this.barrio = barrio;
+        this.destacado = destacado;
+    }
 
     public int getId() {
         return id;
@@ -29,11 +38,11 @@ public class Destacados {
         this.nombre = nombre;
     }
 
-    public String getImagen() {
+    public int getImagen() {
         return imagen;
     }
 
-    public void setImagen(String imagen) {
+    public void setImagen(int imagen) {
         this.imagen = imagen;
     }
 
