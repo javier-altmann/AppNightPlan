@@ -4,7 +4,7 @@ import android.content.Context;
 import android.os.Handler;
 import android.widget.Toast;
 
-import com.example.javieraltmann.nightplan.Models.Grupo;
+import com.example.javieraltmann.nightplan.Models.Recomendados;
 import com.google.gson.Gson;
 
 import java.util.List;
@@ -16,42 +16,44 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
- * Created by javier.altmann on 17/11/2017.
+ * Created by javier.altmann on 23/11/2017.
  */
 
-public class GrupoClient {
+public class RecomendadosClient {
 
     private static Context context;
-    private static GrupoApi client;
+    private static RecomendadosApi client;
 
-    //Necesario inicializar el contexto para usar esta clase
+
     public static void init(Context con) {
+
         context = con;
     }
 
-    private static GrupoApi getClient() {
+
+    private static RecomendadosApi getClient() {
 
         if(client == null) {
             Retrofit retrofit = new Retrofit.Builder()
                     .baseUrl("https://my-json-server.typicode.com/javier-altmann/api-mock/")
                     .addConverterFactory(GsonConverterFactory.create(new Gson()))
                     .build();
-            client = retrofit.create(GrupoApi.class);
+            client = retrofit.create(RecomendadosApi.class);
         }
         return client;
     }
 
 
-    public static void getGrupos(final OnSuccessCallback callback) {
+    public static void getDestacados(final OnSuccessCallback callback) {
 
-        getClient().getGrupos().enqueue(new Callback<List<Grupo>>() {
+        getClient().getRecomendados().enqueue(new Callback<List<Recomendados>>() {
 
             @Override
-            public void onResponse(Call<List<Grupo>> call, Response<List<Grupo>> response) {
+            public void onResponse(Call<List<Recomendados>> call, Response<List<Recomendados>> response) {
                 callback.execute(response.body());
             }
             @Override
-            public void onFailure(Call<List<Grupo>> call, Throwable throwable) {
+            public void onFailure(Call<List<Recomendados>> call, Throwable throwable) {
 
                 Toast.makeText(context, "Fallo al querer conectarse con el servidor", Toast.LENGTH_SHORT).show();
 
@@ -67,6 +69,8 @@ public class GrupoClient {
         });
 
     }
+
+
 
 
 

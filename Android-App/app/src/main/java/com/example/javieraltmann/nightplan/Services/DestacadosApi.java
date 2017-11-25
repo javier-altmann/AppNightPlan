@@ -13,7 +13,7 @@ import retrofit2.http.GET;
 
 public interface DestacadosApi {
 
-    @GET("destacados")
+    @GET("lugares-destacados")
     public Call<List<Destacados>> getDestacados();
 
 }

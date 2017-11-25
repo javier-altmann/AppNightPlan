@@ -55,17 +55,19 @@ public class DestacadosClient {
             @Override
             public void onFailure(Call<List<Destacados>> call, Throwable throwable) {
 
-               Toast.makeText(context, "Fallo al querer conectarse con el servidor", Toast.LENGTH_SHORT).show();
+              Toast.makeText(context, "Fallo al querer conectarse con el servidor", Toast.LENGTH_SHORT).show();
 
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
 
-                        System.exit(0);
-                    }
-                }, 2000);
+                       System.exit(0);
+                   }
+               }, 2000);
             }
+
         });
+
     }
 
 }

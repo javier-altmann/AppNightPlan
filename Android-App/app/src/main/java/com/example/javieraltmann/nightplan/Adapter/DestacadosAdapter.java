@@ -1,15 +1,16 @@
 package com.example.javieraltmann.nightplan.Adapter;
 
 import android.content.Context;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.javieraltmann.nightplan.Models.Destacados;
 import com.example.javieraltmann.nightplan.R;
+import com.facebook.drawee.view.SimpleDraweeView;
 
 import java.util.List;
 
@@ -49,18 +50,18 @@ public class DestacadosAdapter extends BaseAdapter {
 
         destacadosView = LayoutInflater.from(context).inflate(R.layout.destacados_content, viewGroup, false);
 
-        ImageView fotoImg = (ImageView) destacadosView.findViewById(R.id.foto_establecimiento);
+        SimpleDraweeView draweeView = (SimpleDraweeView) destacadosView.findViewById(R.id.foto_establecimiento);
         TextView nombreTv = (TextView) destacadosView.findViewById(R.id.nombre_establecimiento);
         TextView barrioTv = (TextView) destacadosView.findViewById((R.id.barrio));
 
 
         Destacados destacados = destacadosList.get(i);
 
-        fotoImg.setImageResource(destacados.getImagen());
+
+        Uri uri = Uri.parse(destacados.getImagen());
+        draweeView.setImageURI(uri);
         nombreTv.setText(destacados.getNombre());
         barrioTv.setText(destacados.getBarrio());
-
-
 
 
         return destacadosView;

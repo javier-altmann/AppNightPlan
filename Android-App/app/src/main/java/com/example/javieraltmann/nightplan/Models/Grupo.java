@@ -1,7 +1,5 @@
 package com.example.javieraltmann.nightplan.Models;
 
-import android.content.Context;
-
 import java.util.List;
 
 /**
@@ -12,18 +10,21 @@ public class Grupo {
     private int id;
     private String nombreDelGrupo;
     private String fecha;
-    private int fotoDelGrupo;
+    private String fotoDelGrupo;
     private List<Usuario> usuariosList;
-    private Context context;
 
-    public Grupo(int id, String nombreDelGrupo, String fecha, int fotoDelGrupo, List<Usuario> usuariosList, Context context) {
+
+    public Grupo(int id, String nombreDelGrupo, String fecha, String fotoDelGrupo, List<Usuario> usuariosList) {
         this.id = id;
         this.nombreDelGrupo = nombreDelGrupo;
         this.fecha = fecha;
         this.fotoDelGrupo = fotoDelGrupo;
         this.usuariosList = usuariosList;
-        this.context = context;
+
     }
+
+
+
 
 
     public int getId() {
@@ -50,11 +51,11 @@ public class Grupo {
         this.fecha = fecha;
     }
 
-    public int getFotoDelGrupo() {
+    public String getFotoDelGrupo() {
         return fotoDelGrupo;
     }
 
-    public void setFotoDelGrupo(int fotoDelGrupo) {
+    public void setFotoDelGrupo(String fotoDelGrupo) {
         this.fotoDelGrupo = fotoDelGrupo;
     }
 
@@ -66,13 +67,6 @@ public class Grupo {
         this.usuariosList = usuariosList;
     }
 
-    public Context getContext() {
-        return context;
-    }
-
-    public void setContext(Context context) {
-        this.context = context;
-    }
 }
 
 

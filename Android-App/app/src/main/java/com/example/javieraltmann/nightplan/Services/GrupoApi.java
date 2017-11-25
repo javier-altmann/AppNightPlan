@@ -6,7 +6,6 @@ import com.example.javieraltmann.nightplan.Models.Usuario;
 import java.util.List;
 
 import retrofit2.Call;
-import retrofit2.Callback;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
@@ -18,8 +17,8 @@ import retrofit2.http.POST;
 public interface GrupoApi {
 
 
-    @GET("API/grupos")
-    void getGrupos(Callback<List<Grupo>> callback);
+    @GET("grupos")
+    public Call<List<Grupo>> getGrupos();
 
     @POST("grupo/nuevo")
     Call<Usuario> crearGrupo(@Body Grupo group);

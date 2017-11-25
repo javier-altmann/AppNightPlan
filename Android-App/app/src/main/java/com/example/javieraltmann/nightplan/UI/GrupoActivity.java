@@ -9,14 +9,15 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.widget.ListView;
 
+import com.example.javieraltmann.nightplan.Adapter.GrupoAdapter;
 import com.example.javieraltmann.nightplan.Models.Grupo;
 import com.example.javieraltmann.nightplan.ParseoJson;
 import com.example.javieraltmann.nightplan.R;
-import com.google.gson.Gson;
-import com.google.gson.JsonObject;
+import com.example.javieraltmann.nightplan.Services.GrupoClient;
+import com.example.javieraltmann.nightplan.Services.OnSuccessCallback;
 
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -49,36 +50,17 @@ public class GrupoActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
 
-        // List<Grupo> grupoList = new ArrayList<>();
-        /*
-        grupoList.add(new Grupo(getBaseContext(), 1, "Boca", R.drawable.imagen2, "05-11-2017"));
-        grupoList.add(new Grupo(getBaseContext(), 2, "River", R.drawable.imagen2, "06-11-2017"));
-        grupoList.add(new Grupo(getBaseContext(), 3, "Racing", R.drawable.imagen2, "07-11-2017"));
-        grupoList.add(new Grupo(getBaseContext(), 4, "Independiente", R.drawable.imagen2, "08-11-2017"));
 
-        ListView grupoLv = (ListView) findViewById(R.id.crear_grupo_lv);
-        grupoLv.setAdapter(new GrupoAdapter(getBaseContext(), grupoList));
-        */
-
-        /*
-        UsuarioClient.getUsuarios(new OnSuccessCallback() {
+        GrupoClient.getGrupos(new OnSuccessCallback() {
             @Override
             public void execute(Object body) {
-                //Lo que se debe hacer con la respuesta del servidor
-                ListView pizzaLv = (ListView) findViewById(R.id.pizza_lv); //El listview
-                //Le asigno el adapter, al cual le paso el contexto y la lista de pizzas que vino
-                pizzaLv.setAdapter(new PizzaAdapter(getBaseContext(), (List<Pizza>) body));
-                //Saco el Progress Dialog de la pantalla
-                progressDialog.dismiss();
+
+                ListView grupoLv = (ListView) findViewById(R.id.crear_grupo_lv);
+                grupoLv.setAdapter(new GrupoAdapter(getBaseContext(), (List<Grupo>) body));
+
+
             }
         });
-*/
-
-        parse = new ParseoJson();
-        System.out.println("Lectura Json terminada");
-        String jsonString = parse.readMockJsonFile(this);
-        gruposList = Arrays.asList(new Gson().fromJson(new Gson().fromJson(jsonString, JsonObject.class).get("grupos").toString(), Grupo[].class));
-        return;
     }
 
     @Override

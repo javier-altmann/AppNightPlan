@@ -3,8 +3,9 @@
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#FFFF" >
-        <ImageView
+    android:background="#FFFF"
+    android:padding="8dp">
+        <com.facebook.drawee.view.SimpleDraweeView
         android:id="@+id/foto"
         android:layout_width="80dp"
         android:layout_height="60dp"

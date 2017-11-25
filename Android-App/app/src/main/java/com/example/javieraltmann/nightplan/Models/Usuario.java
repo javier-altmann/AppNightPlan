@@ -1,7 +1,5 @@
 package com.example.javieraltmann.nightplan.Models;
 
-import android.content.Context;
-
 /**
  * Created by Caro on 4/11/2017.
  */
@@ -13,24 +11,22 @@ public class Usuario {
     private String nombre;
     private String apellido;
     private String email;
-    private Context context;
+    private String imagenUsuario;
 
 
-
-
-
-    public Usuario(String username, String password, String name, String lastName, String imagen, Context context) {
+    public Usuario(String username, String password, String name, String lastName, String imagenUsuario) {
         this.username = username;
         this.password = password;
         this.nombre = name;
         this.apellido = lastName;
-        this.context = context;
+        this.imagenUsuario = imagenUsuario;
+
     }
 
-    public Usuario(String username, String password, Context context) {
+    public Usuario(String username, String password) {
         this.username = username;
         this.password = password;
-        this.context = context;
+
 
     }
 
@@ -74,11 +70,19 @@ public class Usuario {
         this.email = email;
     }
 
-    public Context getContext() {
-        return context;
+    public int getId() {
+        return id;
     }
 
-    public void setContext(Context context) {
-        this.context = context;
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getImagenUsuario() {
+        return imagenUsuario;
+    }
+
+    public void setImagenUsuario(String imagenUsuario) {
+        this.imagenUsuario = imagenUsuario;
     }
 }

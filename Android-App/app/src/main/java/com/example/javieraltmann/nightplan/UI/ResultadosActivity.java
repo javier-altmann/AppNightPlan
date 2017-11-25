@@ -20,13 +20,10 @@ public class ResultadosActivity extends AppCompatActivity {
         setContentView(R.layout.content_grupo_resultados);
 
         RecyclerView participantesRv = (RecyclerView) findViewById(R.id.participantes_rv);
-        RecyclerView recomendacionesRv = (RecyclerView) findViewById(R.id.rcomendaciones_rv);
+//        RecyclerView recomendacionesRv = (RecyclerView) findViewById(R.id.rcomendaciones_rv);
 
         participantesRv.setLayoutManager(new LinearLayoutManager(this));
-        recomendacionesRv.setLayoutManager(new LinearLayoutManager(this));
-
-
-
+//        recomendacionesRv.setLayoutManager(new LinearLayoutManager(this));
     }
 
 }
