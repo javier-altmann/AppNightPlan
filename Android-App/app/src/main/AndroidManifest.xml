@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
         <activity
-            android:name=".UI.DestacadosActivity"
+            android:name=".UI.InicioActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,13 +30,16 @@
         <activity android:name=".UI.ResultadosActivity"
             android:label="@string/destacados"/> <!-- Es la pantalla de destacados -->
 
-        <activity android:name=".UI.InicioActivity"/> <!-- Es la pantalla numero 1 de la app -->
+        <activity android:name=".UI.DestacadosActivity"
+            android:label="Destacados"/> <!-- Es la pantalla numero 1 de la app -->
 
         <activity android:name=".UI.GrupoDestacadosActivity"
                   android:label="Grupo"/> <!-- Es la pantalla numero 1 de la app -->
 
         <activity android:name=".UI.LoginActivity"
             android:label="Grupo"/> <!-- Es la pantalla de resultados -->
+
+
 
 
     </application>
