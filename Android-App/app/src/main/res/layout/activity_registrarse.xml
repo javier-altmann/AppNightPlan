@@ -27,7 +27,6 @@
         android:fontFamily="@font/montserratregular"
         android:id="@+id/username"
         android:textColor="#FFFF"
-
         android:maxLines="1"
         />
     <EditText
@@ -110,8 +109,8 @@
 
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
         android:layout_marginTop="45dp"
         android:background="#FFFFFF">
 
