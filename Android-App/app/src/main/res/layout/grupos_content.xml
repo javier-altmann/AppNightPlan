@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#FFFF"
     android:padding="8dp">
         <com.facebook.drawee.view.SimpleDraweeView
         android:id="@+id/foto"
         android:layout_width="80dp"
         android:layout_height="60dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="10dp" />
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="10dp"
+            />
 
         <TextView
             android:id="@+id/nombre_grupo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_marginTop="22dp"
+            android:layout_marginTop="35dp"
             android:textSize="15dp"
             android:textColor="#050404"/>
 
@@ -26,8 +27,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="35dp"
             android:textSize="12dp"
             android:layout_marginLeft="90dp"
             android:textColor="#BDBABA" />
+
+
+
+
 </LinearLayout>
+
