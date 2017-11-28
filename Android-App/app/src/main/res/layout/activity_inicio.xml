@@ -8,10 +8,11 @@
     android:background="#151431">
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="350dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         android:src="@drawable/logofondotransparente"
-        android:layout_marginTop="60dp"/>
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="40dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
