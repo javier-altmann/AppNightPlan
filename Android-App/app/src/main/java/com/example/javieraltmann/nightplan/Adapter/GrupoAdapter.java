@@ -18,7 +18,7 @@ import com.google.gson.Gson;
 import java.util.List;
 
 /**
- * Created by Caro on 9/11/2017.
+ * Created by Javier on 28/11/2017.
  */
 
 public class GrupoAdapter extends BaseAdapter {
@@ -56,10 +56,15 @@ public class GrupoAdapter extends BaseAdapter {
 
         final Grupo grupo = grupoList.get(i);
 
+
+
+
         Uri uri = Uri.parse(grupo.getFotoDelGrupo());
         draweeView.setImageURI(uri);
         nombreTv.setText(grupo.getNombreDelGrupo());
         fechaTv.setText(grupo.getFecha());
+
+
 
         grupoView.setOnClickListener(new View.OnClickListener() {
             @Override
