@@ -2,7 +2,6 @@ package com.example.javieraltmann.nightplan.UI;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -37,7 +36,7 @@ public class LoginActivity extends AppCompatActivity {
         registrarteBtn = (TextView) findViewById(R.id.registrarse);
 
 
-        userEt.setHintTextColor(Color.WHITE);
+
         enterBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
