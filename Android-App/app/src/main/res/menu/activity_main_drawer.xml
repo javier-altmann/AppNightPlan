@@ -11,9 +11,6 @@
             android:id="@+id/nav_mis_grupos"
             android:title="Mis grupos" />
 
-
-
-
     </group>
 
     <item

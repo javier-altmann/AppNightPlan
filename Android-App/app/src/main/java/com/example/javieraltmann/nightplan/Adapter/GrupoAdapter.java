@@ -58,7 +58,6 @@ public class GrupoAdapter extends BaseAdapter {
 
 
 
-
         Uri uri = Uri.parse(grupo.getFotoDelGrupo());
         draweeView.setImageURI(uri);
         nombreTv.setText(grupo.getNombreDelGrupo());

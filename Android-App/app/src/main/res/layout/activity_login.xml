@@ -4,9 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#151431"
-
-    >
+    android:background="#151431">
 
     <ImageView
         android:layout_width="190dp"
@@ -24,7 +22,7 @@
         android:layout_marginBottom="20dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="10dp"
-        android:backgroundTint="#FFFFFFFF"
+        android:backgroundTint="@color/White"
         android:fontFamily="@font/montserratregular"
         android:hint="Usuario"
         android:maxLines="1"
@@ -32,9 +30,11 @@
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
         android:textSize="20dp"
-        >
 
-    </EditText>
+  />
+
+
+
 
     <EditText
         android:id="@+id/password"
@@ -43,7 +43,7 @@
         android:layout_marginBottom="20dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="20dp"
-        android:backgroundTint="#FFFFFFFF"
+        android:backgroundTint="@android:color/white"
         android:fontFamily="@font/montserratregular"
         android:hint="Contraseña"
         android:inputType="textPassword"
@@ -51,57 +51,60 @@
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
-        android:textColorLink="@android:color/white"
-        android:textSize="20dp">
+        android:textSize="20dp"/>
 
-    </EditText>
     <Button
-        android:layout_marginTop="15dp"
+        android:id="@+id/enter_btn"
         android:layout_width="250dp"
-        android:layout_marginLeft="70dp"
         android:layout_height="wrap_content"
-        android:text="Iniciar Sesión"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/boton_redondo"
+        android:text="Iniciar Sesión"
         android:textColor="#FFFF"
         android:textSize="20dp"
-        android:id="@+id/enter_btn"
 
         />
+
     <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        >
+        android:layout_height="fill_parent">
+
         <TextView
-            android:layout_marginTop="35dp"
             android:id="@+id/texto1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
+
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="12dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_toLeftOf="@+id/registrarse"
+            android:layout_toStartOf="@+id/registrarse"
+            android:fontFamily="@font/montserratregular"
             android:text="No tenés cuenta? "
-            android:textSize="20dp"
             android:textAlignment="center"
             android:textColor="#FFFF"
-            android:layout_alignParentLeft="true"
-            android:fontFamily="@font/montserratregular"
+            android:textSize="20dp" />
 
-            />
         <TextView
 
-            android:layout_marginTop="33dp"
+            android:id="@+id/registrarse"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
+
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/texto1"
+            android:layout_marginEnd="37dp"
+            android:layout_marginRight="37dp"
+            android:fontFamily="@font/montserratregular"
             android:text="Registrate"
-            android:textSize="22dp"
             android:textAlignment="center"
             android:textColor="#FFFF"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="55dp"
-            android:textStyle="bold"
-            android:fontFamily="@font/montserratregular"
-            android:id="@+id/registrarse"
-
-
-            />
+            android:textSize="22dp"
+            android:textStyle="bold" />
     </RelativeLayout>
 
 </LinearLayout>
