@@ -25,9 +25,12 @@ public class ParticipantesAdapter extends RecyclerView.Adapter<ParticipantesAdap
 
     class PartcipanteViewHolder extends RecyclerView.ViewHolder {
         SimpleDraweeView imagen;
+      //  TextView username;
+
         public PartcipanteViewHolder(View itemView) {
             super(itemView);
             imagen = (SimpleDraweeView) itemView.findViewById(R.id.imagen_participantes);
+         //   username = (TextView) itemView.findViewById(R.id.participantes_rv);
         }
     }
 
@@ -40,6 +43,7 @@ public class ParticipantesAdapter extends RecyclerView.Adapter<ParticipantesAdap
     @Override
     public void onBindViewHolder(PartcipanteViewHolder holder, int position) {
         holder.imagen.setImageURI(Uri.parse(usuarioList.get(position).getImagenUsuario()));
+       // holder.username.setText(usuarioList.get(position).getUsername());
     }
 
     @Override
