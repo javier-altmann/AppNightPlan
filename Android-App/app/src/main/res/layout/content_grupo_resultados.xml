@@ -33,10 +33,13 @@
             />
 </LinearLayout>
 
-<ListView
-    android:layout_width="match_parent"
-    android:layout_height="600dp"
-    android:id="@+id/participantes_lv"
-    />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/participantes_rv"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="40dp"
+         />
 
 </LinearLayout>

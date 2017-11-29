@@ -7,9 +7,10 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.widget.ListView;
 
 import com.example.javieraltmann.nightplan.Adapter.ParticipantesAdapter;
 import com.example.javieraltmann.nightplan.Models.Usuario;
@@ -27,11 +28,14 @@ import java.util.List;
 public class GrupoDestacadosActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener
  {
+
+     RecyclerView recyclerView ;
+
      @Override
      protected void onCreate(Bundle savedInstanceState) {
          super.onCreate(savedInstanceState);
-         setContentView(R.layout.activity_grupo_preferencias);
          Fresco.initialize(this);
+         setContentView(R.layout.activity_grupo_preferencias);
          Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
          setSupportActionBar(toolbar);
 
@@ -48,9 +52,10 @@ public class GrupoDestacadosActivity extends AppCompatActivity
          String usuariosStr = arguments.getString("usuarios");
          List<Usuario> usuarios =  Arrays.asList(new Gson().fromJson(usuariosStr, Usuario[].class));
 
+         recyclerView = (RecyclerView) findViewById(R.id.participantes_rv);
+         recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
+         recyclerView.setAdapter(new ParticipantesAdapter(this, usuarios));
 
-                 ListView usuariosLv = (ListView) findViewById(R.id.participantes_lv);
-                 usuariosLv.setAdapter(new ParticipantesAdapter(this, usuarios));
 
 
 
