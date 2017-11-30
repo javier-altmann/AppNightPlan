@@ -42,16 +42,7 @@ public class DestacadosActivity extends AppCompatActivity
 
             NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
             navigationView.setNavigationItemSelectedListener(this);
-/*
 
-
-
-            GridView destacadosGv = (GridView) findViewById(R.id.DestacadoGv);
-            destacadosGv.setAdapter(new DestacadosAdapter(getBaseContext(), destacadosList));
-
-
-
-*/
             DestacadosClient.getDestacados(new OnSuccessCallback() {
                 @Override
                 public void execute(Object body) {

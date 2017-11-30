@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
         <activity
-            android:name=".UI.InicioActivity"
+            android:name=".UI.LayoutExampleActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,8 +27,7 @@
         <activity android:name=".UI.CrearGrupoActivity"
             android:label="@string/crear_grupos" /> <!-- Es la pantalla crear grupos -->
 
-        <activity android:name=".UI.ResultadosActivity"
-            android:label="@string/destacados"/> <!-- Es la pantalla de destacados -->
+        <!-- Es la pantalla de destacados -->
 
         <activity android:name=".UI.DestacadosActivity"
             android:label="Destacados"/> <!-- Es la pantalla numero 1 de la app -->
