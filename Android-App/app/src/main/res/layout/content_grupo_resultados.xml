@@ -20,7 +20,7 @@
             android:src="@drawable/preferencias"
             android:layout_gravity="center"
             android:layout_marginTop="15dp"
-
+            android:id="@+id/prefencias_iv"
             />
         <TextView
             android:layout_width="wrap_content"

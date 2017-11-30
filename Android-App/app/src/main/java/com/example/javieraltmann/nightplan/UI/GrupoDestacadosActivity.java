@@ -1,6 +1,7 @@
 package com.example.javieraltmann.nightplan.UI;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.content.ContextCompat;
@@ -17,12 +18,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.example.javieraltmann.nightplan.Adapter.ParticipantesAdapter;
-import com.example.javieraltmann.nightplan.Adapter.ViewPagerAdapter;
-import com.example.javieraltmann.nightplan.Models.Recomendados;
 import com.example.javieraltmann.nightplan.Models.Usuario;
 import com.example.javieraltmann.nightplan.R;
-import com.example.javieraltmann.nightplan.Services.OnSuccessCallback;
-import com.example.javieraltmann.nightplan.Services.RecomendadosClient;
 import com.google.gson.Gson;
 
 import java.util.Arrays;

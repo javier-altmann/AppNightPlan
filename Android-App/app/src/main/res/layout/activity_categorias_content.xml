@@ -9,7 +9,7 @@
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbar"
-        android:layout_width="385dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#151431"
         android:paddingTop="@dimen/appbar_padding_top"
@@ -27,19 +27,22 @@
                 android:id="@+id/tabItem"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Barrio" />
+                android:text="Barrio"
+                android:layout="@layout/preferencias_barrio_content"/>
 
             <android.support.design.widget.TabItem
                 android:id="@+id/tabItem2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Caracteristicas" />
+                android:text="Caracteristicas"
+                android:layout="@layout/preferencias_caracteristicas_content"/>
 
             <android.support.design.widget.TabItem
                 android:id="@+id/tabItem3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Gastronomia" />
+                android:text="Gastronomia"
+                android:layout="@layout/preferencias_gastronomia_content"/>
 
         </android.support.design.widget.TabLayout>
     </android.support.design.widget.AppBarLayout>

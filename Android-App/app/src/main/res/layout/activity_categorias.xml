@@ -18,16 +18,12 @@
             android:layout_height="?attr/actionBarSize"
             android:background="@color/ColorMenu"
             android:id="@+id/toolbar"
-            app:theme="@style/MenuHamburguesa"
-            />
-
+            app:theme="@style/MenuHamburguesa" />
 
         <include
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            layout="@layout/content_grupo_resultados"
-            />
-
+            layout="@layout/activity_categorias_content" />
 
     </LinearLayout>
 
