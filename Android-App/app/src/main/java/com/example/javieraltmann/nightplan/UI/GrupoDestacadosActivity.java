@@ -34,7 +34,6 @@ public class GrupoDestacadosActivity extends AppCompatActivity
      @Override
      protected void onCreate(Bundle savedInstanceState) {
          super.onCreate(savedInstanceState);
-         Fresco.initialize(this);
          setContentView(R.layout.activity_grupo_preferencias);
          Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
          setSupportActionBar(toolbar);

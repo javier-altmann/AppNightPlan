@@ -12,6 +12,7 @@ import com.example.javieraltmann.nightplan.Models.Recomendados;
 import com.example.javieraltmann.nightplan.R;
 import com.example.javieraltmann.nightplan.Services.OnSuccessCallback;
 import com.example.javieraltmann.nightplan.Services.RecomendadosClient;
+import com.facebook.drawee.backends.pipeline.Fresco;
 
 import java.util.List;
 import java.util.Timer;
@@ -30,6 +31,7 @@ public class LayoutExampleActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_layout_example);
 
         viewPager = (ViewPager) findViewById(R.id.viewPager);
