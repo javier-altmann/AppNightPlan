@@ -13,10 +13,7 @@
         <activity
             android:name=".UI.LayoutExampleActivity"
             android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
 
 
@@ -30,6 +27,8 @@
 
         <!-- Es la pantalla de destacados -->
 
+        <activity android:name=".UI.CategoriasActivity" android:label="Categorias"/>
+
         <activity android:name=".UI.DestacadosActivity"
             android:label="Destacados"/> <!-- Es la pantalla numero 1 de la app -->
 
@@ -37,7 +36,12 @@
                   android:label="Grupo"/> <!-- Es la pantalla numero 1 de la app -->
 
         <activity android:name=".UI.LoginActivity"
-            android:label="Grupo"/> <!-- Es la pantalla de resultados -->
+            android:label="Grupo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- Es la pantalla de resultados -->
 
 
 

@@ -1,7 +1,6 @@
 package com.example.javieraltmann.nightplan.UI;
 
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -18,7 +17,6 @@ import android.widget.ImageView;
 import com.example.javieraltmann.nightplan.Adapter.ParticipantesAdapter;
 import com.example.javieraltmann.nightplan.Models.Usuario;
 import com.example.javieraltmann.nightplan.R;
-import com.facebook.drawee.backends.pipeline.Fresco;
 import com.google.gson.Gson;
 
 import java.util.Arrays;
@@ -28,16 +26,14 @@ import java.util.List;
  * Created by javier.altmann on 28/11/2017.
  */
 
-public class GrupoDestacadosActivity extends AppCompatActivity
+public class CategoriasActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener
  {
-
-     RecyclerView recyclerView ;
 
      @Override
      protected void onCreate(Bundle savedInstanceState) {
          super.onCreate(savedInstanceState);
-         setContentView(R.layout.activity_grupo_preferencias);
+         setContentView(R.layout.activity_categorias);
          Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
          setSupportActionBar(toolbar);
 
@@ -49,24 +45,6 @@ public class GrupoDestacadosActivity extends AppCompatActivity
 
          NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
          navigationView.setNavigationItemSelectedListener(this);
-
-         Bundle arguments = getIntent().getExtras();
-         String usuariosStr = arguments.getString("usuarios");
-         List<Usuario> usuarios =  Arrays.asList(new Gson().fromJson(usuariosStr, Usuario[].class));
-
-         recyclerView = (RecyclerView) findViewById(R.id.participantes_rv);
-         recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
-         recyclerView.setAdapter(new ParticipantesAdapter(this, usuarios));
-
-
-         ImageView preferenciasIv = (ImageView) findViewById(R.id.prefencias_iv);
-         preferenciasIv.setOnClickListener(new View.OnClickListener() {
-             @Override
-             public void onClick(View v) {
-                 Intent intent = new Intent(GrupoDestacadosActivity.this, CategoriasActivity.class);
-                 startActivity(intent);
-             }
-         });
      }
 
      @Override
