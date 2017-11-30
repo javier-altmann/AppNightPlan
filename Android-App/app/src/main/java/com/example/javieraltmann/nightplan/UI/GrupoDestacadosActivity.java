@@ -3,7 +3,9 @@ package com.example.javieraltmann.nightplan.UI;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -11,11 +13,16 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import com.example.javieraltmann.nightplan.Adapter.ParticipantesAdapter;
+import com.example.javieraltmann.nightplan.Adapter.ViewPagerAdapter;
+import com.example.javieraltmann.nightplan.Models.Recomendados;
 import com.example.javieraltmann.nightplan.Models.Usuario;
 import com.example.javieraltmann.nightplan.R;
-import com.facebook.drawee.backends.pipeline.Fresco;
+import com.example.javieraltmann.nightplan.Services.OnSuccessCallback;
+import com.example.javieraltmann.nightplan.Services.RecomendadosClient;
 import com.google.gson.Gson;
 
 import java.util.Arrays;
@@ -28,6 +35,13 @@ import java.util.List;
 public class GrupoDestacadosActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener
  {
+
+     ViewPager viewPager;
+     LinearLayout sliderDotspanel;
+     private int dotscount;
+     private ImageView[] dots;
+
+
 
      RecyclerView recyclerView ;
 
@@ -54,6 +68,66 @@ public class GrupoDestacadosActivity extends AppCompatActivity
          recyclerView = (RecyclerView) findViewById(R.id.participantes_rv);
          recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
          recyclerView.setAdapter(new ParticipantesAdapter(this, usuarios));
+
+
+         // ACA EMPIEZA EL SLIDESHOW
+         viewPager = (ViewPager) findViewById(R.id.viewPager);
+
+         sliderDotspanel = (LinearLayout) findViewById(R.id.SliderDots);
+
+
+         RecomendadosClient.getDestacados(new OnSuccessCallback() {
+             @Override
+             public void execute(Object body) {
+                 ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getBaseContext(),(List<Recomendados>) body);
+
+                 viewPager.setAdapter(viewPagerAdapter);
+
+             }
+         });
+
+         // ACA EMPIEZA LOS PUNTITOS DE ABAJO DEL SLIDESHOW
+         dotscount = 4;
+         dots = new ImageView[dotscount];
+
+
+         for (int i = 0; i < dotscount; i++){
+
+             dots[i] = new ImageView(this);
+             dots[i].setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.nonactive_dot));
+
+             LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+
+             params.setMargins(8, 0, 8, 0);
+
+             sliderDotspanel.addView(dots[i], params);
+
+         }
+
+         dots[0].setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.active_dot));
+
+         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+             @Override
+             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+             }
+
+             @Override
+             public void onPageSelected(int position) {
+
+                 for(int i = 0; i< dotscount; i++){
+                     dots[i].setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.nonactive_dot));
+                 }
+
+                 dots[position].setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.active_dot));
+
+             }
+
+             @Override
+             public void onPageScrollStateChanged(int state) {
+
+             }
+         });
 
 
 

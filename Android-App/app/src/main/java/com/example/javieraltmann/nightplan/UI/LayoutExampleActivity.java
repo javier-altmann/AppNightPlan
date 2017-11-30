@@ -12,11 +12,8 @@ import com.example.javieraltmann.nightplan.Models.Recomendados;
 import com.example.javieraltmann.nightplan.R;
 import com.example.javieraltmann.nightplan.Services.OnSuccessCallback;
 import com.example.javieraltmann.nightplan.Services.RecomendadosClient;
-import com.facebook.drawee.backends.pipeline.Fresco;
 
 import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
 
 /**
  * Created by javier.altmann on 29/11/2017.
@@ -32,6 +29,7 @@ public class LayoutExampleActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        // AGREGAR ESTE LAYOUT EN
         setContentView(R.layout.activity_layout_example);
 
         viewPager = (ViewPager) findViewById(R.id.viewPager);
@@ -95,12 +93,12 @@ public class LayoutExampleActivity extends AppCompatActivity {
             }
         });
 
-        Timer timer = new Timer();
-        timer.scheduleAtFixedRate(new MyTimerTask(), 2000, 4000);
+     //   Timer timer = new Timer();
+     //   timer.scheduleAtFixedRate(new MyTimerTask(), 2000, 4000);
 
     }
 
-
+/*
     public class MyTimerTask extends TimerTask {
 
         @Override
@@ -123,5 +121,5 @@ public class LayoutExampleActivity extends AppCompatActivity {
 
         }
     }
-
+*/
 }
