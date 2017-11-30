@@ -15,7 +15,6 @@ import android.widget.ListView;
 
 import com.example.javieraltmann.nightplan.Adapter.GrupoAdapter;
 import com.example.javieraltmann.nightplan.Models.Grupo;
-import com.example.javieraltmann.nightplan.ParseoJson;
 import com.example.javieraltmann.nightplan.R;
 import com.example.javieraltmann.nightplan.Services.GrupoClient;
 import com.example.javieraltmann.nightplan.Services.OnSuccessCallback;
@@ -31,7 +30,7 @@ public class GrupoActivity extends AppCompatActivity
 
 
     private List<Grupo> gruposList;
-    private ParseoJson parse;
+
 
 
     @Override

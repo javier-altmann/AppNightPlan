@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme.NoActionBar"
         android:name=".Application">
         <activity
-            android:name=".UI.LayoutExampleActivity"
+            android:name=".UI.InicioActivity"
             android:theme="@style/AppTheme.NoActionBar">
 
         </activity>
@@ -33,7 +33,7 @@
             android:label="Destacados"/> <!-- Es la pantalla numero 1 de la app -->
 
         <activity android:name=".UI.GrupoDestacadosActivity"
-                  android:label="Grupo"/> <!-- Es la pantalla numero 1 de la app -->
+            android:label="Grupos"/> <!-- Es la pantalla numero 1 de la app -->
 
         <activity android:name=".UI.LoginActivity"
             android:label="Grupo">
