@@ -1,6 +1,8 @@
 package com.example.javieraltmann.nightplan.UI;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -13,10 +15,10 @@ import android.widget.GridView;
 
 import com.example.javieraltmann.nightplan.Adapter.DestacadosAdapter;
 import com.example.javieraltmann.nightplan.Models.Destacados;
+import com.example.javieraltmann.nightplan.Persistencia;
 import com.example.javieraltmann.nightplan.R;
 import com.example.javieraltmann.nightplan.Services.DestacadosClient;
 import com.example.javieraltmann.nightplan.Services.OnSuccessCallback;
-import com.facebook.drawee.backends.pipeline.Fresco;
 
 import java.util.List;
 
@@ -26,10 +28,15 @@ import java.util.List;
 
 public class DestacadosActivity extends AppCompatActivity
     implements NavigationView.OnNavigationItemSelectedListener {
-        @Override
+
+    private SharedPreferences prefs;
+
+    @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_destacados);
+
+            prefs = getSharedPreferences("Preferences", Context.MODE_PRIVATE);
             Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
             setSupportActionBar(toolbar);
 
@@ -69,12 +76,15 @@ public class DestacadosActivity extends AppCompatActivity
             } else if (id == R.id.nav_cuenta) {
 
             } else if (id == R.id.nav_cerrar_sesion) {
-                Intent intent = new Intent(getBaseContext(), LoginActivity.class);
-                this.startActivity(intent);
+                Persistencia p = new Persistencia();
+                p.resetearSharedPreferences(prefs);
+                p.logout(this,LoginActivity.class);
             }
 
             DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
             drawer.closeDrawer(GravityCompat.START);
             return true;
         }
+
+
 }

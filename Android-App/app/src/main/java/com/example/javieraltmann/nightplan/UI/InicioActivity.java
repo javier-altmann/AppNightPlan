@@ -1,37 +1,65 @@
 package com.example.javieraltmann.nightplan.UI;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.view.WindowManager;
 
+import com.example.javieraltmann.nightplan.Models.Destacados;
 import com.example.javieraltmann.nightplan.R;
 
 public class InicioActivity extends AppCompatActivity {
 
     private final int DURACION_SPLASH = 500;
-
-
+    private SharedPreferences prefs;
+    private Intent intentLogin;
+    private Intent intentDestacados;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inicio);
 
+
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         setContentView(R.layout.activity_inicio);
 
+        prefs = getSharedPreferences("Preferences", Context.MODE_PRIVATE);
+        intentLogin = new Intent(this,LoginActivity.class);
+        intentDestacados = new Intent(this, Destacados.class);
+
+
         new Handler().postDelayed(new Runnable(){
             public void run(){
-                Intent intent = new Intent(InicioActivity.this, LoginActivity.class);
-                startActivity(intent);
+                if(!TextUtils.isEmpty(getUsernamePrefs()) && !TextUtils.isEmpty(getPasswordPrefs())){
+                    startActivity(intentDestacados);
+                }else{
+                    startActivity(intentDestacados);
+                }
                 finish();
-            };
+            }
         }, DURACION_SPLASH);
+
     }
+
+
+
+    private String getUsernamePrefs(){
+        return  prefs.getString("username", "");
+
+    }
+    private String getPasswordPrefs(){
+        return prefs.getString("password","");
+    }
+
+
 }
+
 
