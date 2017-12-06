@@ -56,14 +56,10 @@ public class GrupoAdapter extends BaseAdapter {
 
         final Grupo grupo = grupoList.get(i);
 
-
-
         Uri uri = Uri.parse(grupo.getFotoDelGrupo());
         draweeView.setImageURI(uri);
         nombreTv.setText(grupo.getNombreDelGrupo());
         fechaTv.setText(grupo.getFecha());
-
-
 
         grupoView.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -33,15 +33,15 @@ public class InicioActivity extends AppCompatActivity {
 
         prefs = getSharedPreferences("Preferences", Context.MODE_PRIVATE);
         intentLogin = new Intent(this,LoginActivity.class);
-        intentDestacados = new Intent(this, Destacados.class);
+        intentDestacados = new Intent(this, DestacadosActivity.class);
 
 
         new Handler().postDelayed(new Runnable(){
             public void run(){
-                if(!TextUtils.isEmpty(getUsernamePrefs()) && !TextUtils.isEmpty(getPasswordPrefs())){
+                if(!TextUtils.isEmpty(getUsernamePrefs())){
                     startActivity(intentDestacados);
                 }else{
-                    startActivity(intentDestacados);
+                    startActivity(intentLogin);
                 }
                 finish();
             }
@@ -55,11 +55,6 @@ public class InicioActivity extends AppCompatActivity {
         return  prefs.getString("username", "");
 
     }
-    private String getPasswordPrefs(){
-        return prefs.getString("password","");
-    }
-
-
 }
 
 
