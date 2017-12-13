@@ -13,6 +13,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.javieraltmann.nightplan.R;
+import com.facebook.CallbackManager;
+import com.facebook.FacebookCallback;
+import com.facebook.FacebookException;
+import com.facebook.login.LoginResult;
+import com.facebook.login.widget.LoginButton;
 
 /**
  * Created by javier.altmann on 3/11/2017.
@@ -24,6 +29,8 @@ public class LoginActivity extends AppCompatActivity {
     private EditText passwordEt;
     private Button enterBtn;
     private TextView registrarteBtn;
+    private CallbackManager callbackManager;
+    private LoginButton loginButton;
     private Context context;
     private SharedPreferences prefs;
 
@@ -37,6 +44,26 @@ public class LoginActivity extends AppCompatActivity {
         context = this;
         enterBtn = (Button) findViewById(R.id.enter_btn);
         registrarteBtn = (TextView) findViewById(R.id.registrarse);
+
+        callbackManager = CallbackManager.Factory.create();
+        loginButton = (LoginButton) findViewById(R.id.login_button);
+        loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+            @Override
+            public void onSuccess(LoginResult loginResult) {
+                goToDestacados();
+            }
+
+            @Override
+            public void onCancel() {
+                Toast.makeText(getApplicationContext(),"Cacenlo login",Toast.LENGTH_SHORT);
+            }
+
+            @Override
+            public void onError(FacebookException error) {
+                Toast.makeText(getApplicationContext(),"Error login",Toast.LENGTH_SHORT);
+            }
+        });
+
 
 
 
@@ -65,6 +92,13 @@ public class LoginActivity extends AppCompatActivity {
 
 
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        callbackManager.onActivityResult(requestCode,resultCode,data);
+    }
+
     private void bindUi(){
         userEt = (EditText) findViewById(R.id.username);
         passwordEt = (EditText) findViewById(R.id.password);
