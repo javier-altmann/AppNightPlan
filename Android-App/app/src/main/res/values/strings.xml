@@ -1,4 +1,7 @@
 <resources>
+    <string name="facebook_app_id">507583302974777</string>
+    <string name="fb_login_protocol_scheme">fb507583302974777</string>
+
     <string name="app_name">Night Plan</string>
     <string name="mis_grupos">Mis Grupos</string>
     <string name="crear_grupos">Crear Grupos</string>
