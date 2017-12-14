@@ -1,6 +1,8 @@
 package com.example.javieraltmann.nightplan.UI;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.content.ContextCompat;
@@ -21,6 +23,7 @@ import com.example.javieraltmann.nightplan.Adapter.ParticipantesAdapter;
 import com.example.javieraltmann.nightplan.Adapter.ViewPagerAdapter;
 import com.example.javieraltmann.nightplan.Models.Recomendados;
 import com.example.javieraltmann.nightplan.Models.Usuario;
+import com.example.javieraltmann.nightplan.Persistencia;
 import com.example.javieraltmann.nightplan.R;
 import com.example.javieraltmann.nightplan.Services.OnSuccessCallback;
 import com.example.javieraltmann.nightplan.Services.RecomendadosClient;
@@ -38,11 +41,12 @@ import java.util.List;
 public class GrupoDestacadosActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener
  {
-
+     private SharedPreferences prefs;
      ViewPager viewPager;
      LinearLayout sliderDotspanel;
      private int dotscount;
      private ImageView[] dots;
+
 
 
 
@@ -52,6 +56,8 @@ public class GrupoDestacadosActivity extends AppCompatActivity
      protected void onCreate(Bundle savedInstanceState) {
          super.onCreate(savedInstanceState);
          setContentView(R.layout.activity_grupo_preferencias);
+         prefs = getSharedPreferences("Preferences", Context.MODE_PRIVATE);
+
          Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
          setSupportActionBar(toolbar);
 
@@ -162,8 +168,10 @@ public class GrupoDestacadosActivity extends AppCompatActivity
          } else if (id == R.id.nav_cuenta) {
 
          } else if (id == R.id.nav_cerrar_sesion) {
-             Intent intent = new Intent(getBaseContext(), LoginActivity.class);
-             this.startActivity(intent);
+             Persistencia p = new Persistencia();
+             p.resetearSharedPreferences(prefs);
+             p.logout(this,LoginActivity.class);
+             p.logoutFacebook(this, LoginActivity.class);
          }
 
          DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

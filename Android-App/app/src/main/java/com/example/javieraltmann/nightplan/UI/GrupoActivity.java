@@ -1,6 +1,8 @@
 package com.example.javieraltmann.nightplan.UI;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -15,6 +17,7 @@ import android.widget.ListView;
 
 import com.example.javieraltmann.nightplan.Adapter.GrupoAdapter;
 import com.example.javieraltmann.nightplan.Models.Grupo;
+import com.example.javieraltmann.nightplan.Persistencia;
 import com.example.javieraltmann.nightplan.R;
 import com.example.javieraltmann.nightplan.Services.GrupoClient;
 import com.example.javieraltmann.nightplan.Services.OnSuccessCallback;
@@ -28,7 +31,7 @@ import java.util.List;
 public class GrupoActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-
+    private SharedPreferences prefs;
     private List<Grupo> gruposList;
 
 
@@ -37,6 +40,7 @@ public class GrupoActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grupos);
+        prefs = getSharedPreferences("Preferences", Context.MODE_PRIVATE);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -90,8 +94,10 @@ public class GrupoActivity extends AppCompatActivity
 
 
         } else if (id == R.id.nav_cerrar_sesion) {
-            Intent intent = new Intent(getBaseContext(), LoginActivity.class);
-            this.startActivity(intent);
+            Persistencia p = new Persistencia();
+            p.resetearSharedPreferences(prefs);
+            p.logout(this,LoginActivity.class);
+            p.logoutFacebook(this, LoginActivity.class);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

@@ -19,6 +19,9 @@ import com.facebook.FacebookException;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 /**
  * Created by javier.altmann on 3/11/2017.
  */
@@ -63,7 +66,6 @@ public class LoginActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(),"Error login",Toast.LENGTH_SHORT);
             }
         });
-
 
 
 

@@ -12,6 +12,7 @@ import android.view.WindowManager;
 
 import com.example.javieraltmann.nightplan.Models.Destacados;
 import com.example.javieraltmann.nightplan.R;
+import com.facebook.AccessToken;
 
 public class InicioActivity extends AppCompatActivity {
 
@@ -38,7 +39,9 @@ public class InicioActivity extends AppCompatActivity {
 
         new Handler().postDelayed(new Runnable(){
             public void run(){
-                if(!TextUtils.isEmpty(getUsernamePrefs())){
+
+
+                if(!TextUtils.isEmpty(getUsernamePrefs()) || AccessToken.getCurrentAccessToken() != null ) {
                     startActivity(intentDestacados);
                 }else{
                     startActivity(intentLogin);

@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 
+import com.example.javieraltmann.nightplan.Persistencia;
 import com.example.javieraltmann.nightplan.R;
 import com.example.javieraltmann.nightplan.Tabs.TabBarrios;
 import com.example.javieraltmann.nightplan.Tabs.TabCaracteristicas;
@@ -37,21 +38,6 @@ public class PreferenciasActivity extends AppCompatActivity
         setContentView(R.layout.activity_categorias_content);
 
 
-    /*  COMENTO MENU
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.addDrawerListener(toggle);
-        toggle.syncState();
-
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
-*/
-
-
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
@@ -68,31 +54,6 @@ public class PreferenciasActivity extends AppCompatActivity
 
 
     }
-
-    /* COMENTO MENU
-    @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-        int id = item.getItemId();
-
-        if (id == R.id.nav_inicio) {
-            // Handle the camera action
-        } else if (id == R.id.nav_mis_grupos) {
-
-        } else if (id == R.id.nav_historial) {
-
-        } else if (id == R.id.nav_cuenta) {
-
-        } else if (id == R.id.nav_cerrar_sesion) {
-
-        }
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
-        return true;
-    }
-
-*/
 
 
     /**

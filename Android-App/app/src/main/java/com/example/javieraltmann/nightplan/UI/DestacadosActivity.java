@@ -10,6 +10,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.GridView;
 
@@ -19,18 +20,20 @@ import com.example.javieraltmann.nightplan.Persistencia;
 import com.example.javieraltmann.nightplan.R;
 import com.example.javieraltmann.nightplan.Services.DestacadosClient;
 import com.example.javieraltmann.nightplan.Services.OnSuccessCallback;
+import com.facebook.login.widget.LoginButton;
 
+import java.util.Arrays;
 import java.util.List;
 
 /**
- * Created by CRISTIAN RIVERA on 10/11/2017.
+ * Created by JAVIER ALTMANN on 14/12/2017.
  */
 
 public class DestacadosActivity extends AppCompatActivity
     implements NavigationView.OnNavigationItemSelectedListener {
 
     private SharedPreferences prefs;
-
+    private LoginButton loginButton;
     @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -48,7 +51,7 @@ public class DestacadosActivity extends AppCompatActivity
 
             NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
             navigationView.setNavigationItemSelectedListener(this);
-
+            loginButton = (LoginButton) findViewById(R.id.login_button);
             DestacadosClient.getDestacados(new OnSuccessCallback() {
                 @Override
                 public void execute(Object body) {
@@ -79,6 +82,7 @@ public class DestacadosActivity extends AppCompatActivity
                 Persistencia p = new Persistencia();
                 p.resetearSharedPreferences(prefs);
                 p.logout(this,LoginActivity.class);
+                p.logoutFacebook(this, LoginActivity.class);
             }
 
             DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

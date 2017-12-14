@@ -1,6 +1,8 @@
 package com.example.javieraltmann.nightplan.UI;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.NavigationView;
@@ -24,6 +26,7 @@ import android.widget.ImageView;
 
 import com.example.javieraltmann.nightplan.Adapter.ParticipantesAdapter;
 import com.example.javieraltmann.nightplan.Models.Usuario;
+import com.example.javieraltmann.nightplan.Persistencia;
 import com.example.javieraltmann.nightplan.R;
 import com.google.gson.Gson;
 
@@ -38,7 +41,7 @@ import java.util.List;
 public class CategoriasActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener
  {
-
+     private SharedPreferences prefs;
      private SectionsPagerAdapter viewPagerAdapter;
      private ViewPager viewPager;
      private AppBarLayout appBarLayout;
@@ -48,6 +51,8 @@ public class CategoriasActivity extends AppCompatActivity
      protected void onCreate(Bundle savedInstanceState) {
          super.onCreate(savedInstanceState);
          setContentView(R.layout.activity_categorias);
+         prefs = getSharedPreferences("Preferences", Context.MODE_PRIVATE);
+
          Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
          setSupportActionBar(toolbar);
 
@@ -82,8 +87,10 @@ public class CategoriasActivity extends AppCompatActivity
          } else if (id == R.id.nav_cuenta) {
 
          } else if (id == R.id.nav_cerrar_sesion) {
-             Intent intent = new Intent(getBaseContext(), LoginActivity.class);
-             this.startActivity(intent);
+             Persistencia p = new Persistencia();
+             p.resetearSharedPreferences(prefs);
+             p.logout(this,LoginActivity.class);
+             p.logoutFacebook(this, LoginActivity.class);
          }
 
          DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
