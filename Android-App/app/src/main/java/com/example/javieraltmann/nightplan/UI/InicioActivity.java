@@ -42,6 +42,8 @@ public class InicioActivity extends AppCompatActivity {
 
 
                 if(!TextUtils.isEmpty(getUsernamePrefs()) || AccessToken.getCurrentAccessToken() != null ) {
+
+
                     startActivity(intentDestacados);
                 }else{
                     startActivity(intentLogin);

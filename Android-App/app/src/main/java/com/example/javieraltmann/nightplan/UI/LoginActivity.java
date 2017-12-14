@@ -13,9 +13,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.javieraltmann.nightplan.R;
+import com.facebook.AccessToken;
+import com.facebook.AccessTokenTracker;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
+import com.facebook.Profile;
+import com.facebook.ProfileTracker;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 
@@ -36,6 +40,8 @@ public class LoginActivity extends AppCompatActivity {
     private LoginButton loginButton;
     private Context context;
     private SharedPreferences prefs;
+    private AccessTokenTracker accessTokenTracker;
+    private ProfileTracker profileTracker;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +59,35 @@ public class LoginActivity extends AppCompatActivity {
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
+                //Vemos si el usuario acepto los permisos
+                AccessToken accessToken = loginResult.getAccessToken();
+                //Obtenemos la informacion de la persona que ingreso con facebook
+                final Profile profile = Profile.getCurrentProfile();
+
+
+                accessTokenTracker = new AccessTokenTracker() {
+                    @Override
+                    protected void onCurrentAccessTokenChanged(AccessToken oldAccessToken, AccessToken currentAccessToken) {
+
+                    }
+                };
+
+                profileTracker = new ProfileTracker() {
+                    @Override
+                    protected void onCurrentProfileChanged(Profile oldProfile, Profile currentProfile) {
+                        Datos(currentProfile);
+                    }
+                };
+
+                accessTokenTracker.startTracking();
+                profileTracker.startTracking();
+
+                loginButton.setReadPermissions("user_friends");
+                loginButton.setReadPermissions("public_profile");
+                loginButton.setReadPermissions("email");
+
+
+
                 goToDestacados();
             }
 
@@ -138,6 +173,14 @@ public class LoginActivity extends AppCompatActivity {
         editor.putString("username",username);
         editor.putString("password",password);
         editor.apply();
+    }
+
+    private void Datos(Profile perfil){
+        if(perfil!=null) {
+            perfil.getId();
+            perfil.getName();
+            perfil.getLastName();
+        }
     }
 
 }
