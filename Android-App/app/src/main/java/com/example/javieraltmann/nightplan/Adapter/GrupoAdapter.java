@@ -3,6 +3,7 @@ package com.example.javieraltmann.nightplan.Adapter;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,11 +11,13 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.example.javieraltmann.nightplan.Models.Grupo;
+import com.example.javieraltmann.nightplan.Models.Respuestas;
 import com.example.javieraltmann.nightplan.R;
 import com.example.javieraltmann.nightplan.UI.GrupoDestacadosActivity;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.google.gson.Gson;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**

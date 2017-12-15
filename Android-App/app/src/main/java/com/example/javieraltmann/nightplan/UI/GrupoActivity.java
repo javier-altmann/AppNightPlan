@@ -16,12 +16,23 @@ import android.view.View;
 import android.widget.ListView;
 
 import com.example.javieraltmann.nightplan.Adapter.GrupoAdapter;
+import com.example.javieraltmann.nightplan.Adapter.ParticipantesAdapter;
 import com.example.javieraltmann.nightplan.Models.Grupo;
+import com.example.javieraltmann.nightplan.Models.Respuestas;
+import com.example.javieraltmann.nightplan.Models.Usuario;
 import com.example.javieraltmann.nightplan.Persistencia;
 import com.example.javieraltmann.nightplan.R;
 import com.example.javieraltmann.nightplan.Services.GrupoClient;
 import com.example.javieraltmann.nightplan.Services.OnSuccessCallback;
+import com.example.javieraltmann.nightplan.Services.RecomendadosClient;
+import com.example.javieraltmann.nightplan.Services.RespuestasClient;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonElement;
+import com.google.gson.stream.JsonReader;
 
+import java.io.Serializable;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -74,6 +85,25 @@ public class GrupoActivity extends AppCompatActivity
 
             }
         });
+
+        RespuestasClient.getRespuestas(new OnSuccessCallback() {
+            @Override
+            public void execute(Object body) {
+                Gson gson = new Gson();
+                String response = gson.toJson(body);
+                List<Respuestas> respuestas = Arrays.asList(new Gson().fromJson(response, Respuestas[].class));
+                Intent intent = new Intent(GrupoActivity.this, GrupoDestacadosActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("respuestas", (Serializable) respuestas);
+                intent.putExtras(bundle);
+               // startActivity(intent);
+
+
+            }
+        });
+
+
+
     }
 
     @Override

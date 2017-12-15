@@ -2,11 +2,15 @@ package com.example.javieraltmann.nightplan.Adapter;
 
 import android.content.Context;
 import android.net.Uri;
+import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
+import com.example.javieraltmann.nightplan.Models.Recomendados;
+import com.example.javieraltmann.nightplan.Models.Respuestas;
 import com.example.javieraltmann.nightplan.Models.Usuario;
 import com.example.javieraltmann.nightplan.R;
 import com.facebook.drawee.view.SimpleDraweeView;
@@ -17,11 +21,14 @@ public class ParticipantesAdapter extends RecyclerView.Adapter<ParticipantesAdap
 
     Context context;
     List<Usuario> usuarioList;
+    List<Respuestas> respuestasList;
 
-    public ParticipantesAdapter(Context context, List<Usuario> usuarioList) {
+    public ParticipantesAdapter(Context context, List<Usuario> usuarioList,List<Respuestas>respuestasList) {
         this.context = context;
         this.usuarioList = usuarioList;
+        this.respuestasList = respuestasList;
     }
+
 
     class PartcipanteViewHolder extends RecyclerView.ViewHolder {
         SimpleDraweeView imagen;
@@ -29,6 +36,8 @@ public class ParticipantesAdapter extends RecyclerView.Adapter<ParticipantesAdap
 
         public PartcipanteViewHolder(View itemView) {
             super(itemView);
+
+
             imagen = (SimpleDraweeView) itemView.findViewById(R.id.imagen_participantes);
          //   username = (TextView) itemView.findViewById(R.id.participantes_rv);
         }
@@ -42,6 +51,19 @@ public class ParticipantesAdapter extends RecyclerView.Adapter<ParticipantesAdap
 
     @Override
     public void onBindViewHolder(PartcipanteViewHolder holder, int position) {
+
+
+         /*  if(respuestasList.get(position).getIdRespuestasEncuesta().contains(respuestasList.get(position).getId())){
+               Toast.makeText(context,"Ingreso en el if",Toast.LENGTH_LONG);
+            }
+
+            else{
+               Toast.makeText(context,"Ingreso en el else",Toast.LENGTH_LONG);
+            }
+*/
+
+
+
         holder.imagen.setImageURI(Uri.parse(usuarioList.get(position).getImagenUsuario()));
        // holder.username.setText(usuarioList.get(position).getUsername());
     }
@@ -54,3 +76,4 @@ public class ParticipantesAdapter extends RecyclerView.Adapter<ParticipantesAdap
 
 
 }
+

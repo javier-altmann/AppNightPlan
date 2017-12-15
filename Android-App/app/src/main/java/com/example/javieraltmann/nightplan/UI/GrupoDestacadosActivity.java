@@ -22,6 +22,7 @@ import android.widget.LinearLayout;
 import com.example.javieraltmann.nightplan.Adapter.ParticipantesAdapter;
 import com.example.javieraltmann.nightplan.Adapter.ViewPagerAdapter;
 import com.example.javieraltmann.nightplan.Models.Recomendados;
+import com.example.javieraltmann.nightplan.Models.Respuestas;
 import com.example.javieraltmann.nightplan.Models.Usuario;
 import com.example.javieraltmann.nightplan.Persistencia;
 import com.example.javieraltmann.nightplan.R;
@@ -29,6 +30,7 @@ import com.example.javieraltmann.nightplan.Services.OnSuccessCallback;
 import com.example.javieraltmann.nightplan.Services.RecomendadosClient;
 import com.google.gson.Gson;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -74,9 +76,14 @@ public class GrupoDestacadosActivity extends AppCompatActivity
          String usuariosStr = arguments.getString("usuarios");
          List<Usuario> usuarios =  Arrays.asList(new Gson().fromJson(usuariosStr, Usuario[].class));
 
+         String respuestasStr = arguments.getString("respuestas");
+         List<Respuestas> respuestas = Arrays.asList(new Gson().fromJson(respuestasStr,Respuestas[].class));
+
+
+
          recyclerView = (RecyclerView) findViewById(R.id.participantes_rv);
          recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
-         recyclerView.setAdapter(new ParticipantesAdapter(this, usuarios));
+         recyclerView.setAdapter(new ParticipantesAdapter(this, usuarios,respuestas));
 
 
 
@@ -86,7 +93,7 @@ public class GrupoDestacadosActivity extends AppCompatActivity
          sliderDotspanel = (LinearLayout) findViewById(R.id.SliderDots);
 
 
-         RecomendadosClient.getDestacados(new OnSuccessCallback() {
+         RecomendadosClient.getRecomendados(new OnSuccessCallback() {
              @Override
              public void execute(Object body) {
                  ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getBaseContext(),(List<Recomendados>) body);

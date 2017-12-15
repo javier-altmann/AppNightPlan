@@ -4,7 +4,8 @@ import android.content.Context;
 import android.os.Handler;
 import android.widget.Toast;
 
-import com.example.javieraltmann.nightplan.Models.Recomendados;
+import com.example.javieraltmann.nightplan.Models.Destacados;
+import com.example.javieraltmann.nightplan.Models.Respuestas;
 import com.google.gson.Gson;
 
 import java.util.List;
@@ -16,13 +17,13 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
- * Created by javier.altmann on 23/11/2017.
+ * Created by Caro on 15/12/2017.
  */
 
-public class RecomendadosClient {
+public class RespuestasClient {
 
     private static Context context;
-    private static RecomendadosApi client;
+    private static RespuestasApi client;
 
 
     public static void init(Context con) {
@@ -31,29 +32,29 @@ public class RecomendadosClient {
     }
 
 
-    private static RecomendadosApi getClient() {
+    private static RespuestasApi getClient() {
 
         if(client == null) {
             Retrofit retrofit = new Retrofit.Builder()
                     .baseUrl("https://my-json-server.typicode.com/javier-altmann/api-mock/")
                     .addConverterFactory(GsonConverterFactory.create(new Gson()))
                     .build();
-            client = retrofit.create(RecomendadosApi.class);
+            client = retrofit.create(RespuestasApi.class);
         }
         return client;
     }
 
 
-    public static void getRecomendados(final OnSuccessCallback callback) {
+    public static void getRespuestas(final OnSuccessCallback callback) {
 
-        getClient().getRecomendados().enqueue(new Callback<List<Recomendados>>() {
+        getClient().getRespuestas().enqueue(new Callback<List<Respuestas>>() {
 
             @Override
-            public void onResponse(Call<List<Recomendados>> call, Response<List<Recomendados>> response) {
+            public void onResponse(Call<List<Respuestas>> call, Response<List<Respuestas>> response) {
                 callback.execute(response.body());
             }
             @Override
-            public void onFailure(Call<List<Recomendados>> call, Throwable throwable) {
+            public void onFailure(Call<List<Respuestas>> call, Throwable throwable) {
 
                 Toast.makeText(context, "Fallo al querer conectarse con el servidor", Toast.LENGTH_SHORT).show();
 
@@ -69,8 +70,6 @@ public class RecomendadosClient {
         });
 
     }
-
-
 
 
 
