@@ -23,7 +23,7 @@ public class ParticipantesAdapter extends RecyclerView.Adapter<ParticipantesAdap
     List<Usuario> usuarioList;
     List<Respuestas> respuestasList;
 
-    public ParticipantesAdapter(Context context, List<Usuario> usuarioList,List<Respuestas>respuestasList) {
+    public ParticipantesAdapter(Context context,  List<Usuario> usuarioList,List<Respuestas>respuestasList) {
         this.context = context;
         this.usuarioList = usuarioList;
         this.respuestasList = respuestasList;

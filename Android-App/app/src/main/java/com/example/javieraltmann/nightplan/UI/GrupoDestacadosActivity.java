@@ -76,9 +76,9 @@ public class GrupoDestacadosActivity extends AppCompatActivity
          String usuariosStr = arguments.getString("usuarios");
          List<Usuario> usuarios =  Arrays.asList(new Gson().fromJson(usuariosStr, Usuario[].class));
 
-         String respuestasStr = arguments.getString("respuestas");
-         List<Respuestas> respuestas = Arrays.asList(new Gson().fromJson(respuestasStr,Respuestas[].class));
 
+           String respuestaSerializado = arguments.getString("respuestas");
+           List<Respuestas> respuestas = Arrays.asList(new Gson().fromJson(respuestaSerializado, Respuestas[].class));
 
 
          recyclerView = (RecyclerView) findViewById(R.id.participantes_rv);

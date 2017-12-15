@@ -44,6 +44,7 @@ public class GrupoActivity extends AppCompatActivity
 
     private SharedPreferences prefs;
     private List<Grupo> gruposList;
+    Context context;
 
 
 
@@ -52,7 +53,7 @@ public class GrupoActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grupos);
         prefs = getSharedPreferences("Preferences", Context.MODE_PRIVATE);
-
+        context = this;
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -89,14 +90,13 @@ public class GrupoActivity extends AppCompatActivity
         RespuestasClient.getRespuestas(new OnSuccessCallback() {
             @Override
             public void execute(Object body) {
-                Gson gson = new Gson();
-                String response = gson.toJson(body);
-                List<Respuestas> respuestas = Arrays.asList(new Gson().fromJson(response, Respuestas[].class));
-                Intent intent = new Intent(GrupoActivity.this, GrupoDestacadosActivity.class);
-                Bundle bundle = new Bundle();
-                bundle.putSerializable("respuestas", (Serializable) respuestas);
-                intent.putExtras(bundle);
-               // startActivity(intent);
+
+              Intent intent = new Intent(GrupoActivity.this,GrupoDestacadosActivity.class);
+                String resultadoSerializado = new Gson().toJson(body);
+                        intent.putExtra("respuestas", resultadoSerializado);
+                    context.startActivity(intent);
+
+
 
 
             }
