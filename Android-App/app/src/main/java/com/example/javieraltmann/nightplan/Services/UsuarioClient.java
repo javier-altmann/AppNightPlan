@@ -21,7 +21,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class UsuarioClient {
     private static Context context;
-    private static UsuarioApi client;
+    private static AppNightPlanApi client;
 
     //Necesario inicializar el contexto para usar esta clase
     public static void init(Context con) {
@@ -31,14 +31,14 @@ public class UsuarioClient {
 
 
     //Genera un cliente para consumir la API por HTTP
-    private static UsuarioApi getClient() {
+    private static AppNightPlanApi getClient() {
         //Si el cliente no esta instanciado aun...
         if(client == null) {
             Retrofit retrofit = new Retrofit.Builder()
                     .baseUrl("https://my-json-server.typicode.com/javier-altmann/api-mock/usuarios/") //URL BASE de la API
                     .addConverterFactory(GsonConverterFactory.create(new Gson())) //El GsonConverter, para parsear automaticamente las respuestas que vengan en objetos del modelo
                     .build();
-            client = retrofit.create(UsuarioApi.class); //La interfaz que lista los metodos disponibles a consultar de nuestra API
+            client = retrofit.create(AppNightPlanApi.class); //La interfaz que lista los metodos disponibles a consultar de nuestra API
         }
         return client;
     }

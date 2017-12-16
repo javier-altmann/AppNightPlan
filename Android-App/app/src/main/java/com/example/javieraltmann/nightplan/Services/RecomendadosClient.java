@@ -22,7 +22,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RecomendadosClient {
 
     private static Context context;
-    private static RecomendadosApi client;
+    private static AppNightPlanApi client;
 
 
     public static void init(Context con) {
@@ -31,14 +31,14 @@ public class RecomendadosClient {
     }
 
 
-    private static RecomendadosApi getClient() {
+    private static AppNightPlanApi getClient() {
 
         if(client == null) {
             Retrofit retrofit = new Retrofit.Builder()
                     .baseUrl("https://my-json-server.typicode.com/javier-altmann/api-mock/")
                     .addConverterFactory(GsonConverterFactory.create(new Gson()))
                     .build();
-            client = retrofit.create(RecomendadosApi.class);
+            client = retrofit.create(AppNightPlanApi.class);
         }
         return client;
     }

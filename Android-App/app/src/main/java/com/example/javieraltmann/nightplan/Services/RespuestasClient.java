@@ -23,7 +23,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RespuestasClient {
 
     private static Context context;
-    private static RespuestasApi client;
+    private static AppNightPlanApi client;
 
 
     public static void init(Context con) {
@@ -32,14 +32,14 @@ public class RespuestasClient {
     }
 
 
-    private static RespuestasApi getClient() {
+    private static AppNightPlanApi getClient() {
 
         if(client == null) {
             Retrofit retrofit = new Retrofit.Builder()
                     .baseUrl("https://my-json-server.typicode.com/javier-altmann/api-mock/")
                     .addConverterFactory(GsonConverterFactory.create(new Gson()))
                     .build();
-            client = retrofit.create(RespuestasApi.class);
+            client = retrofit.create(AppNightPlanApi.class);
         }
         return client;
     }

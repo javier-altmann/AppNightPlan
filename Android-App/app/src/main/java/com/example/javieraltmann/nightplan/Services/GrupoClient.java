@@ -22,21 +22,21 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class GrupoClient {
 
     private static Context context;
-    private static GrupoApi client;
+    private static AppNightPlanApi client;
 
     //Necesario inicializar el contexto para usar esta clase
     public static void init(Context con) {
         context = con;
     }
 
-    private static GrupoApi getClient() {
+    private static AppNightPlanApi getClient() {
 
         if(client == null) {
             Retrofit retrofit = new Retrofit.Builder()
                     .baseUrl("https://my-json-server.typicode.com/javier-altmann/api-mock/")
                     .addConverterFactory(GsonConverterFactory.create(new Gson()))
                     .build();
-            client = retrofit.create(GrupoApi.class);
+            client = retrofit.create(AppNightPlanApi.class);
         }
         return client;
     }
